@@ -1,26 +1,475 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* ============================================================
+   AWS Exam Practice — Design System
+   Premium dark theme with glassmorphism + AWS-inspired colors
+   ============================================================ */
+
+@theme {
+  /* AWS-inspired color palette */
+  --color-aws-orange: #FF9900;
+  --color-aws-dark: #232F3E;
+  --color-aws-navy: #1B2838;
+  --color-aws-squid: #131A22;
+
+  /* Brand accents */
+  --color-brand-primary: #FF9900;
+  --color-brand-secondary: #146EB4;
+  --color-brand-glow: rgba(255, 153, 0, 0.15);
+
+  /* Status colors */
+  --color-correct: #10B981;
+  --color-incorrect: #EF4444;
+  --color-warning: #F59E0B;
+  --color-info: #3B82F6;
+
+  /* Surface colors */
+  --color-surface-0: #0A0E17;
+  --color-surface-1: #111827;
+  --color-surface-2: #1F2937;
+  --color-surface-3: #374151;
+  --color-surface-glass: rgba(17, 24, 39, 0.7);
+
+  /* Text colors */
+  --color-text-primary: #F9FAFB;
+  --color-text-secondary: #9CA3AF;
+  --color-text-muted: #6B7280;
+
+  /* Border colors */
+  --color-border-subtle: rgba(255, 255, 255, 0.06);
+  --color-border-default: rgba(255, 255, 255, 0.1);
+  --color-border-hover: rgba(255, 255, 255, 0.2);
+
+  /* Fonts */
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* ============================================================
+   Global resets & base styles
+   ============================================================ */
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-surface-3) transparent;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-surface-0);
+  color: var(--color-text-primary);
+  font-family: var(--font-sans);
+}
+
+/* ============================================================
+   Animated background gradient
+   ============================================================ */
+
+.bg-gradient-animated {
+  background: linear-gradient(
+    135deg,
+    var(--color-surface-0) 0%,
+    #0D1B2A 25%,
+    #1B2838 50%,
+    #0D1B2A 75%,
+    var(--color-surface-0) 100%
+  );
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+}
+
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* ============================================================
+   Glassmorphism cards
+   ============================================================ */
+
+.glass-card {
+  background: var(--color-surface-glass);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: 16px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card:hover {
+  border-color: var(--color-border-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.glass-card-static {
+  background: var(--color-surface-glass);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: 16px;
+}
+
+/* ============================================================
+   Glow effects
+   ============================================================ */
+
+.glow-orange {
+  box-shadow: 0 0 20px rgba(255, 153, 0, 0.15),
+              0 0 60px rgba(255, 153, 0, 0.05);
+}
+
+.glow-green {
+  box-shadow: 0 0 20px rgba(16, 185, 129, 0.15),
+              0 0 60px rgba(16, 185, 129, 0.05);
+}
+
+.glow-red {
+  box-shadow: 0 0 20px rgba(239, 68, 68, 0.15),
+              0 0 60px rgba(239, 68, 68, 0.05);
+}
+
+/* ============================================================
+   Buttons
+   ============================================================ */
+
+.btn-primary {
+  background: linear-gradient(135deg, #FF9900 0%, #E88800 100%);
+  color: #000;
+  font-weight: 600;
+  padding: 12px 28px;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  border: none;
+  font-size: 1rem;
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 20px rgba(255, 153, 0, 0.4);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.btn-secondary {
+  background: var(--color-surface-2);
+  color: var(--color-text-primary);
+  font-weight: 500;
+  padding: 12px 28px;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  border: 1px solid var(--color-border-default);
+  font-size: 1rem;
+}
+
+.btn-secondary:hover {
+  background: var(--color-surface-3);
+  border-color: var(--color-border-hover);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--color-text-secondary);
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  border: none;
+  font-size: 0.875rem;
+}
+
+.btn-ghost:hover {
+  color: var(--color-text-primary);
+  background: var(--color-surface-2);
+}
+
+/* ============================================================
+   Option cards for quiz answers
+   ============================================================ */
+
+.option-card {
+  background: var(--color-surface-1);
+  border: 2px solid var(--color-border-subtle);
+  border-radius: 12px;
+  padding: 16px 20px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.option-card:hover {
+  border-color: var(--color-border-hover);
+  background: var(--color-surface-2);
+}
+
+.option-card.selected {
+  border-color: var(--color-aws-orange);
+  background: rgba(255, 153, 0, 0.08);
+}
+
+.option-card.correct {
+  border-color: var(--color-correct);
+  background: rgba(16, 185, 129, 0.08);
+}
+
+.option-card.incorrect {
+  border-color: var(--color-incorrect);
+  background: rgba(239, 68, 68, 0.08);
+}
+
+.option-card.disabled {
+  cursor: default;
+  opacity: 0.7;
+}
+
+/* ============================================================
+   Radio/Checkbox indicators
+   ============================================================ */
+
+.option-indicator {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 2px solid var(--color-surface-3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 1px;
+  transition: all 0.2s ease;
+}
+
+.option-indicator.checkbox {
+  border-radius: 6px;
+}
+
+.option-indicator.selected {
+  border-color: var(--color-aws-orange);
+  background: var(--color-aws-orange);
+}
+
+.option-indicator.correct {
+  border-color: var(--color-correct);
+  background: var(--color-correct);
+}
+
+.option-indicator.incorrect {
+  border-color: var(--color-incorrect);
+  background: var(--color-incorrect);
+}
+
+/* ============================================================
+   Progress bar
+   ============================================================ */
+
+.progress-bar-track {
+  height: 6px;
+  background: var(--color-surface-2);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  border-radius: 3px;
+  background: linear-gradient(90deg, var(--color-aws-orange), #FFB84D);
+  transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ============================================================
+   Score circle animation
+   ============================================================ */
+
+.score-circle {
+  transform: rotate(-90deg);
+}
+
+.score-circle-track {
+  fill: none;
+  stroke: var(--color-surface-2);
+  stroke-width: 8;
+}
+
+.score-circle-fill {
+  fill: none;
+  stroke-width: 8;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ============================================================
+   Question navigation pills
+   ============================================================ */
+
+.nav-pill {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  border: 1px solid var(--color-border-subtle);
+  background: var(--color-surface-1);
+  color: var(--color-text-muted);
+}
+
+.nav-pill:hover {
+  border-color: var(--color-border-hover);
+  color: var(--color-text-primary);
+}
+
+.nav-pill.current {
+  border-color: var(--color-aws-orange);
+  background: rgba(255, 153, 0, 0.12);
+  color: var(--color-aws-orange);
+  font-weight: 700;
+}
+
+.nav-pill.answered {
+  background: var(--color-surface-2);
+  color: var(--color-text-primary);
+  border-color: var(--color-border-default);
+}
+
+.nav-pill.flagged {
+  border-color: var(--color-warning);
+  position: relative;
+}
+
+.nav-pill.flagged::after {
+  content: '🚩';
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  font-size: 10px;
+}
+
+/* ============================================================
+   Timer styles
+   ============================================================ */
+
+.timer {
+  font-variant-numeric: tabular-nums;
+  font-family: var(--font-mono);
+}
+
+.timer.warning {
+  color: var(--color-warning);
+  animation: pulse 1s ease-in-out infinite;
+}
+
+.timer.critical {
+  color: var(--color-incorrect);
+  animation: pulse 0.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+/* ============================================================
+   Fade-in animation
+   ============================================================ */
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-slide-up {
+  animation: slideUp 0.5s ease-out;
+}
+
+/* Staggered children animation */
+.stagger-children > * {
+  animation: fadeIn 0.4s ease-out both;
+}
+
+.stagger-children > *:nth-child(1) { animation-delay: 0ms; }
+.stagger-children > *:nth-child(2) { animation-delay: 60ms; }
+.stagger-children > *:nth-child(3) { animation-delay: 120ms; }
+.stagger-children > *:nth-child(4) { animation-delay: 180ms; }
+.stagger-children > *:nth-child(5) { animation-delay: 240ms; }
+.stagger-children > *:nth-child(6) { animation-delay: 300ms; }
+
+/* ============================================================
+   Domain color accents
+   ============================================================ */
+
+.domain-1-accent { color: #3B82F6; }
+.domain-2-accent { color: #F59E0B; }
+.domain-3-accent { color: #10B981; }
+.domain-4-accent { color: #8B5CF6; }
+
+.domain-1-bg { background: rgba(59, 130, 246, 0.1); border-color: rgba(59, 130, 246, 0.3); }
+.domain-2-bg { background: rgba(245, 158, 11, 0.1); border-color: rgba(245, 158, 11, 0.3); }
+.domain-3-bg { background: rgba(16, 185, 129, 0.1); border-color: rgba(16, 185, 129, 0.3); }
+.domain-4-bg { background: rgba(139, 92, 246, 0.1); border-color: rgba(139, 92, 246, 0.3); }
+
+/* ============================================================
+   Scrollbar styling (webkit)
+   ============================================================ */
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-surface-3);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-surface-3);
+}
+
+/* ============================================================
+   Responsive utilities
+   ============================================================ */
+
+@media (max-width: 768px) {
+  .glass-card {
+    border-radius: 12px;
+  }
+
+  .nav-pill {
+    width: 32px;
+    height: 32px;
+    font-size: 0.75rem;
+  }
 }
