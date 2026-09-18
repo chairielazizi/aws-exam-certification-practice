@@ -17,6 +17,7 @@ function QuizContent() {
   const mode = (searchParams.get('mode') || 'practice') as QuizMode;
   const scope = (searchParams.get('scope') || 'full_exam') as QuizScope;
   const countParam = searchParams.get('count');
+  const styleParam = (searchParams.get('style') || 'all') as 'all' | 'factual' | 'scenario';
 
   // Determine question count and time limit
   const isFullExam = scope === 'full_exam';
@@ -48,6 +49,7 @@ function QuizContent() {
       scope,
       questionCount: requestedCount,
       timeLimit,
+      questionStyle: styleParam,
     };
     const generatedQuestions = generateQuestions(config);
     setQuestions(generatedQuestions);
@@ -150,7 +152,7 @@ function QuizContent() {
     setIsSubmitted(true);
     setShowConfirmSubmit(false);
 
-    const config: QuizConfig = { mode, scope, questionCount: requestedCount, timeLimit };
+    const config: QuizConfig = { mode, scope, questionCount: requestedCount, timeLimit, questionStyle: styleParam };
     const timeTaken = Math.floor((Date.now() - startTime) / 1000);
     const quizResult = calculateResults(questions, answers, config, timeTaken);
     setResult(quizResult);
@@ -282,33 +284,43 @@ function QuizContent() {
                 }
 
                 return (
-                  <button key={option.id} className={optionClass}
-                    onClick={() => selectAnswer(currentQuestion.id, option.id)}
-                    disabled={showResult}>
-                    <div className={indicatorClass}>
-                      {(showResult && isCorrectOption) && (
-                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-                          <path d="M2.5 6L5 8.5L9.5 3.5" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                        </svg>
-                      )}
-                      {(showResult && isSelected && !isCorrectOption) && (
-                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
-                          <path d="M2 2L8 8M8 2L2 8" stroke="white" strokeWidth="2" strokeLinecap="round" />
-                        </svg>
-                      )}
-                      {(!showResult && isSelected) && (
-                        <div className="w-2.5 h-2.5 rounded-full bg-white" />
-                      )}
-                    </div>
-                    <div className="flex-1 text-left">
-                      <span className="text-xs font-medium text-gray-400 mr-2">
-                        {option.id.toUpperCase()}.
-                      </span>
-                      <span className={`text-sm ${showResult ? (isCorrectOption ? 'text-emerald-300' : (isSelected ? 'text-red-300' : 'text-gray-400')) : 'text-gray-200'}`}>
-                        {option.text}
-                      </span>
-                    </div>
-                  </button>
+                  <div key={option.id} className={`${optionClass} !flex-col !items-stretch !p-0 overflow-hidden mb-3`}>
+                    <button
+                      className="w-full flex items-center p-4 text-left transition-colors hover:bg-white/5"
+                      onClick={() => selectAnswer(currentQuestion.id, option.id)}
+                      disabled={showResult}>
+                      <div className={indicatorClass}>
+                        {(showResult && isCorrectOption) && (
+                          <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                            <path d="M2.5 6L5 8.5L9.5 3.5" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                          </svg>
+                        )}
+                        {(showResult && isSelected && !isCorrectOption) && (
+                          <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+                            <path d="M2 2L8 8M8 2L2 8" stroke="white" strokeWidth="2" strokeLinecap="round" />
+                          </svg>
+                        )}
+                        {(!showResult && isSelected) && (
+                          <div className="w-2.5 h-2.5 rounded-full bg-white" />
+                        )}
+                      </div>
+                      <div className="flex-1 text-left">
+                        <span className="text-xs font-medium text-gray-400 mr-2">
+                          {option.id.toUpperCase()}.
+                        </span>
+                        <span className={`text-sm ${showResult ? (isCorrectOption ? 'text-emerald-300' : (isSelected ? 'text-red-300' : 'text-gray-400')) : 'text-gray-200'}`}>
+                          {option.text}
+                        </span>
+                      </div>
+                    </button>
+                    {showResult && currentQuestion.optionExplanations?.[option.id] && (
+                      <div className="pl-[3.25rem] pr-4 pb-4 text-xs text-gray-400 animate-fade-in">
+                        <div className="pt-3 border-t border-white/5 leading-relaxed">
+                          {currentQuestion.optionExplanations[option.id]}
+                        </div>
+                      </div>
+                    )}
+                  </div>
                 );
               })}
             </div>
@@ -362,7 +374,7 @@ function QuizContent() {
 
                 {mode === 'practice' && isPracticeAnswered && currentIndex === questions.length - 1 && (
                   <button onClick={() => {
-                    const config: QuizConfig = { mode, scope, questionCount: requestedCount, timeLimit };
+                    const config: QuizConfig = { mode, scope, questionCount: requestedCount, timeLimit, questionStyle: styleParam };
                     const timeTaken = Math.floor((Date.now() - startTime) / 1000);
                     const quizResult = calculateResults(questions, answers, config, timeTaken);
                     setResult(quizResult);
@@ -633,11 +645,20 @@ function ResultsView({
                   const wasSelected = qr.selectedAnswers.includes(opt.id);
 
                   return (
-                    <div key={opt.id} className={`text-xs px-3 py-2 rounded-lg flex items-center gap-2 ${isCorrect ? 'bg-emerald-500/10 text-emerald-300' : wasSelected ? 'bg-red-500/10 text-red-300' : 'text-gray-500'}`}>
-                      <span className="font-medium">{opt.id.toUpperCase()}.</span>
-                      <span>{opt.text}</span>
-                      {isCorrect && <span className="ml-auto">✓</span>}
-                      {wasSelected && !isCorrect && <span className="ml-auto">✗</span>}
+                    <div key={opt.id} className={`rounded-lg mb-2 border border-white/5 ${isCorrect ? 'bg-emerald-500/10 text-emerald-300 border-emerald-500/20' : wasSelected ? 'bg-red-500/10 text-red-300 border-red-500/20' : 'bg-white/5 text-gray-500'}`}>
+                      <div className="text-xs px-3 py-2.5 flex items-center gap-2">
+                        <span className="font-medium">{opt.id.toUpperCase()}.</span>
+                        <span className="leading-relaxed">{opt.text}</span>
+                        {isCorrect && <span className="ml-auto">✓</span>}
+                        {wasSelected && !isCorrect && <span className="ml-auto">✗</span>}
+                      </div>
+                      {qr.question.optionExplanations?.[opt.id] && (
+                        <div className="px-3 pb-2.5 text-[11px] text-gray-400 opacity-80">
+                          <div className="pt-2.5 border-t border-white/10 leading-relaxed">
+                            {qr.question.optionExplanations[opt.id]}
+                          </div>
+                        </div>
+                      )}
                     </div>
                   );
                 })}

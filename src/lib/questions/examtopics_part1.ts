@@ -1370,13 +1370,9 @@ export const examtopicsPart1Questions: Question[] = [
   {
     "id": "et-50",
     "domainId": 3,
-    "questionText": "A company recently deployed an Amazon RDS instance in its VP",
+    "questionText": "A company recently deployed an Amazon RDS instance in its VPC. The company needs to implement a stateful firewall to limit traffic to the private corporate network. Which AWS service or feature should the company use to limit network traffic directly to its RDS instance?",
     "questionType": "single_choice",
     "options": [
-      {
-        "id": "c",
-        "text": "The company needs to implement a stateful firewall to limit traffic to the private corporate network.Which AWS service or feature should the company use to limit network traffic directly to its RDS instance?"
-      },
       {
         "id": "a",
         "text": "Network ACLs"

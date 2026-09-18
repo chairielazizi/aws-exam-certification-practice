@@ -1,0 +1,67 @@
+{
+  "d1-001": {
+    "a": "Agility refers to the ability to rapidly innovate and deliver resources to developers quickly, rather than eliminating data center operational costs.",
+    "c": "Deploying globally in minutes refers to the ability to expand applications to multiple AWS Regions worldwide with minimal latency, not the reduction of physical infrastructure costs.",
+    "d": "Elasticity refers to the ability to automatically scale computing resources up or down based on current demand, rather than the elimination of data center maintenance expenses."
+  },
+  "d1-002": {
+    "a": "High availability focuses on keeping systems operational and accessible with minimal downtime, not on dynamically adjusting resources to match capacity needs.",
+    "b": "Economies of scale refers to lower variable costs resulting from aggregate usage across many customers, rather than the ability to scale infrastructure based on demand.",
+    "d": "Agility describes the speed and flexibility of provisioning resources quickly to innovate faster, rather than eliminating the need to predict capacity."
+  },
+  "d1-003": {
+    "a": "IaaS provides raw infrastructure building blocks like virtual machines, storage, and networking, leaving the customer responsible for installing and managing the operating system and applications. It does not deliver a finished, fully managed application.",
+    "b": "PaaS provides a platform for developers to deploy and run code without managing underlying servers, but customers are still responsible for developing and maintaining the application itself. It does not provide a completed, ready-to-use end-user product.",
+    "d": "FaaS allows developers to run modular pieces of code in response to events without managing servers, rather than offering a full application interface. Users must write and maintain their own application logic rather than consuming a pre-built software service."
+  },
+  "d1-004": {
+    "a": "A private cloud model hosts all infrastructure on-premises or exclusively for a single organization, without integrating public cloud resources.",
+    "b": "A community cloud is shared by multiple organizations with common concerns, rather than a single organization combining its local data center with AWS.",
+    "d": "A public cloud deployment runs all infrastructure and applications entirely within the cloud provider's environment, with no on-premises data center integration."
+  },
+  "d1-005": {
+    "a": "The Security pillar focuses on protecting data, systems, and assets through confidentiality, integrity, and risk management strategies rather than managing operational processes.",
+    "b": "The Reliability pillar focuses on ensuring a workload performs its intended function correctly and consistently, including recovering from operational or infrastructure disruptions.",
+    "d": "The Performance Efficiency pillar focuses on using computing resources efficiently to meet system requirements and maintaining that efficiency as demand changes and technology evolves."
+  },
+  "d1-006": {
+    "b": "AWS CloudFormation is an Infrastructure as Code (IaC) service used to model and provision AWS resources using templates, rather than managing or visualizing cloud migrations.",
+    "c": "AWS Trusted Advisor focuses on optimizing your AWS environment for cost, security, performance, and fault tolerance, not on defining or tracking migration strategies.",
+    "d": "AWS Config is used to assess, audit, and evaluate the configurations of your AWS resources for compliance, rather than guiding application migrations to the cloud."
+  },
+  "d1-007": {
+    "b": "While scalability is a key cloud concept, it is a design principle evaluated within pillars like Reliability and Performance Efficiency, not a standalone pillar itself.",
+    "c": "Elasticity is an architectural best practice used to adapt to changing demand, but it is considered a technique within the framework rather than one of the six main pillars.",
+    "e": "The framework focuses on financial management through the Cost Optimization pillar, whereas Affordability is not a formal AWS Well-Architected pillar name."
+  },
+  "d1-008": {
+    "a": "Replatforming involves making minor optimizations or infrastructure tweaks to the application to take advantage of cloud capabilities without altering its core architecture.",
+    "b": "Refactoring requires redesigning and rewriting the application code to make it fully cloud-native and take full advantage of cloud features.",
+    "d": "Repurchasing involves replacing the existing application entirely by switching to a different product or a Software-as-a-Service (SaaS) platform."
+  },
+  "d1-009": {
+    "a": "'Go global in minutes' refers to deploying applications in multiple AWS Regions worldwide quickly to reduce latency for users, rather than converting capital expenses to variable costs.",
+    "b": "'Stop guessing capacity' focuses on dynamically adjusting resources to avoid over- or under-provisioning, rather than addressing upfront capital investments.",
+    "d": "'Increase speed and agility' relates to reducing the time required to provision IT resources to accelerate innovation, not reducing initial infrastructure expenditures."
+  },
+  "d1-010": {
+    "a": "Elasticity refers to the ability to dynamically scale resources up or down based on demand, which helps optimize usage rather than reducing the base unit costs through aggregated purchasing power.",
+    "c": "High availability ensures that systems remain operational and accessible with minimal downtime, focusing on infrastructure reliability rather than cost reduction.",
+    "d": "Fault tolerance is a system's capability to continue operating seamlessly when a component fails, which is a resiliency feature rather than a financial advantage."
+  },
+  "d1-011": {
+    "a": "Performance Efficiency focuses on using computing resources efficiently to meet system requirements and maintaining that efficiency as demand changes, rather than ensuring consistent functional execution.",
+    "b": "The Security pillar focuses on protecting data, systems, and assets through risk assessment and mitigation strategies, rather than ensuring operational consistency.",
+    "d": "Cost Optimization focuses on running systems to deliver business value at the lowest price point, rather than ensuring a workload performs its intended function correctly."
+  },
+  "d1-012": {
+    "a": "Rehost (lift-and-shift) involves moving an application to the cloud without making any changes to its core architecture, which does not apply when breaking a monolith into microservices.",
+    "b": "Replatform involves making minor optimizations to the environment or infrastructure without modifying the application's underlying code or architecture.",
+    "d": "Retire involves turning off or decommissioning applications that are no longer needed, rather than modernizing them."
+  },
+  "d1-013": {
+    "a": "Hardware and software failures are inevitable in any environment, so assuming components will never fail is unrealistic. Instead, systems should be designed to handle and recover from failures automatically when they occur.",
+    "c": "Using expensive services does not guarantee immunity from failures. Reliability in the cloud is achieved through architectural strategies like redundancy and fault tolerance rather than higher spending on single components.",
+    "d": "Under the AWS Shared Responsibility Model, customers are responsible for designing resilient applications that handle failover automatically, rather than relying on manual intervention from AWS support."
+  }
+}

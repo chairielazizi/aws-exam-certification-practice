@@ -51,8 +51,13 @@ export function generateFullExam(): Question[] {
 /**
  * Generate questions for domain-specific practice.
  */
-export function generateDomainPractice(domainId: number, count: number): Question[] {
-  const domainQuestions = getQuestionsByDomain(domainId);
+export function generateDomainPractice(domainId: number, count: number, style?: 'all' | 'factual' | 'scenario'): Question[] {
+  let domainQuestions = getQuestionsByDomain(domainId);
+  
+  if (style && style !== 'all') {
+    domainQuestions = domainQuestions.filter(q => q.style === style);
+  }
+  
   return shuffleArray(pickRandom(domainQuestions, count));
 }
 
@@ -65,7 +70,7 @@ export function generateQuestions(config: QuizConfig): Question[] {
   }
 
   const domainId = parseInt(config.scope.replace('domain_', ''));
-  return generateDomainPractice(domainId, config.questionCount);
+  return generateDomainPractice(domainId, config.questionCount, config.questionStyle);
 }
 
 /**

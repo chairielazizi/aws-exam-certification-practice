@@ -22,6 +22,8 @@ export interface Question {
   options: QuestionOption[];
   correctAnswers: string[];
   explanation: string;
+  optionExplanations?: Record<string, string>;
+  style?: 'factual' | 'scenario';
   referenceLinks: { text: string; url: string }[];
   difficulty: Difficulty;
   isUnscored: boolean;
@@ -48,6 +50,7 @@ export interface QuizConfig {
   scope: QuizScope;
   questionCount: number;
   timeLimit: number | null; // seconds, null = no limit
+  questionStyle?: 'all' | 'factual' | 'scenario';
 }
 
 export interface QuizState {

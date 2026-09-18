@@ -7,9 +7,33 @@ import { unscoredQuestions } from './unscored';
 import { scenarioQuestions } from './scenarios';
 import { examtopicsPart1Questions } from './examtopics_part1';
 import { examtopicsPart2Questions } from './examtopics_part2';
+import explanationsMap from './option_explanations.json';
+
+// Helper function to infer style
+function assignStylesAndExplanations(questions: Question[]): Question[] {
+  return questions.map(q => {
+    const lowerText = q.questionText.toLowerCase();
+    const isScenario = lowerText.includes('a company') || 
+                       lowerText.includes('a user') || 
+                       lowerText.includes('an organization') || 
+                       lowerText.includes('a developer') ||
+                       lowerText.includes('a team') ||
+                       lowerText.includes('wants to') ||
+                       lowerText.includes('needs to');
+
+    const style = q.style || (q.id.startsWith('sc-') ? 'scenario' : (isScenario ? 'scenario' : 'factual'));
+    const optionExplanations = q.optionExplanations || (explanationsMap as Record<string, Record<string, string>>)[q.id];
+
+    return {
+      ...q,
+      style,
+      ...(optionExplanations ? { optionExplanations } : {})
+    };
+  });
+}
 
 // All questions combined
-export const allQuestions: Question[] = [
+export const allQuestions: Question[] = assignStylesAndExplanations([
   ...domain1Questions,
   ...domain2Questions,
   ...domain3Questions,
@@ -18,7 +42,7 @@ export const allQuestions: Question[] = [
   ...examtopicsPart1Questions,
   ...examtopicsPart2Questions,
   ...unscoredQuestions,
-];
+]);
 
 // Get questions by domain ID
 export function getQuestionsByDomain(domainId: number): Question[] {

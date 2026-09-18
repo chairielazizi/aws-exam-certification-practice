@@ -23,6 +23,11 @@ export const scenarioQuestions: Question[] = [
     correctAnswers: ['d'],
     explanation:
       'Amazon CloudFront is a content delivery network (CDN) service that securely delivers data, videos, applications, and APIs to customers globally with low latency and high transfer speeds. It caches content at edge locations around the world, ensuring users get the content from the nearest location.',
+    optionExplanations: {
+      a: 'AWS Auto Scaling is used to adjust capacity to maintain steady, predictable performance at the lowest possible cost, not specifically for delivering video content globally with low latency.',
+      b: 'Amazon Kinesis Video Streams makes it easy to securely stream video from connected devices to AWS for analytics, machine learning, and other processing. It is not a content delivery network for end users.',
+      c: 'Elastic Load Balancing automatically distributes incoming application traffic across multiple targets, but it does not cache content globally at edge locations like a CDN.',
+    },
     referenceLinks: [
       { text: 'Amazon CloudFront', url: 'https://aws.amazon.com/cloudfront/' },
     ],
@@ -45,6 +50,11 @@ export const scenarioQuestions: Question[] = [
     correctAnswers: ['d'],
     explanation:
       'AWS Organizations allows you to consolidate multiple AWS accounts into an organization that you create and centrally manage. One of the key benefits is that Reserved Instance sharing is enabled by default for the organization, allowing unused RIs in one account to be applied to matching usage in another account.',
+    optionExplanations: {
+      a: 'AWS Systems Manager is used to view and control your infrastructure on AWS, not to manage billing or share Reserved Instances across accounts.',
+      b: 'Cost Explorer is a tool that enables you to view and analyze your costs and usage, but it does not actively manage multiple accounts or share Reserved Instances between them.',
+      c: 'AWS Trusted Advisor provides real-time guidance to help you provision your resources following AWS best practices, but it does not consolidate accounts or manage RI sharing.',
+    },
     referenceLinks: [
       { text: 'AWS Organizations', url: 'https://aws.amazon.com/organizations/' },
     ],

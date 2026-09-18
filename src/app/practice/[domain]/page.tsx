@@ -4,12 +4,16 @@ import Link from 'next/link';
 import { DOMAINS } from '@/lib/domains';
 import { getQuestionsByDomain } from '@/lib/questions';
 import { useParams } from 'next/navigation';
+import { useState } from 'react';
 
 export default function DomainPracticePage() {
   const params = useParams();
   const domainId = parseInt(params.domain as string);
   const domain = DOMAINS.find((d) => d.id === domainId);
   const questions = domain ? getQuestionsByDomain(domainId) : [];
+  const [styleFilter, setStyleFilter] = useState<'all' | 'factual' | 'scenario'>('all');
+
+  const filteredQuestions = questions.filter(q => styleFilter === 'all' || q.style === styleFilter);
 
   if (!domain) {
     return (
@@ -25,8 +29,8 @@ export default function DomainPracticePage() {
     );
   }
 
-  const questionCounts = [5, 10, 15, 20, questions.length];
-  const uniqueCounts = [...new Set(questionCounts.filter((c) => c <= questions.length))];
+  const questionCounts = [5, 10, 15, 20, filteredQuestions.length];
+  const uniqueCounts = [...new Set(questionCounts.filter((c) => c <= filteredQuestions.length))];
 
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -81,6 +85,34 @@ export default function DomainPracticePage() {
         </div>
       </div>
 
+      {/* Style Filter */}
+      <div className="glass-card-static p-6 mb-8 animate-slide-up">
+        <h3 className="text-sm font-semibold text-white mb-4">Question Style</h3>
+        <div className="flex flex-wrap gap-3">
+          <button
+            onClick={() => setStyleFilter('all')}
+            className={`px-4 py-2 rounded-lg text-sm transition-all ${styleFilter === 'all' ? 'bg-blue-600 text-white' : 'btn-secondary'}`}
+          >
+            Mixed (All)
+          </button>
+          <button
+            onClick={() => setStyleFilter('factual')}
+            className={`px-4 py-2 rounded-lg text-sm transition-all ${styleFilter === 'factual' ? 'bg-blue-600 text-white' : 'btn-secondary'}`}
+          >
+            Factual Only
+          </button>
+          <button
+            onClick={() => setStyleFilter('scenario')}
+            className={`px-4 py-2 rounded-lg text-sm transition-all ${styleFilter === 'scenario' ? 'bg-blue-600 text-white' : 'btn-secondary'}`}
+          >
+            Scenario-based Only
+          </button>
+        </div>
+        <div className="mt-4 text-xs text-gray-400">
+          Showing {filteredQuestions.length} {styleFilter !== 'all' ? styleFilter : ''} questions in this domain.
+        </div>
+      </div>
+
       {/* Mode Selection */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8 stagger-children">
         {/* Practice Mode */}
@@ -104,9 +136,9 @@ export default function DomainPracticePage() {
             <div className="flex flex-wrap gap-2">
               {uniqueCounts.map((count) => (
                 <Link key={count}
-                  href={`/quiz?mode=practice&scope=domain_${domainId}&count=${count}`}
+                  href={`/quiz?mode=practice&scope=domain_${domainId}&count=${count}&style=${styleFilter}`}
                   className="btn-secondary text-sm !py-2 !px-4 !rounded-lg">
-                  {count === questions.length ? `All (${count})` : count}
+                  {count === filteredQuestions.length ? `All (${count})` : count}
                 </Link>
               ))}
             </div>
@@ -134,9 +166,9 @@ export default function DomainPracticePage() {
             <div className="flex flex-wrap gap-2">
               {uniqueCounts.map((count) => (
                 <Link key={count}
-                  href={`/quiz?mode=exam&scope=domain_${domainId}&count=${count}`}
+                  href={`/quiz?mode=exam&scope=domain_${domainId}&count=${count}&style=${styleFilter}`}
                   className="btn-secondary text-sm !py-2 !px-4 !rounded-lg">
-                  {count === questions.length ? `All (${count})` : count}
+                  {count === filteredQuestions.length ? `All (${count})` : count}
                 </Link>
               ))}
             </div>
