@@ -74,7 +74,7 @@ ${incorrectOptions.map(o => `  "${o.id}": "explanation"`).join(',\n')}
     while (!success && retries < maxRetries) {
       try {
         const response = await ai.models.generateContent({
-          model: 'gemini-3.6-flash',
+          model: 'gemini-3.6-flash-8b',
           contents: prompt,
           config: {
             temperature: 0.7,
