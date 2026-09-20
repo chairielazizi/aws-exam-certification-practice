@@ -37,6 +37,9 @@ export default function Header() {
               <Link href="/practice/1" className={`btn-ghost ${pathname.startsWith('/practice') ? 'text-white bg-white/[0.06]' : ''}`}>
                 Practice
               </Link>
+              <Link href="/flashcards" className={`btn-ghost ${pathname.startsWith('/flashcards') ? 'text-white bg-white/[0.06]' : ''}`}>
+                Flashcards
+              </Link>
             </nav>
           )}
 
