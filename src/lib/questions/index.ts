@@ -7,6 +7,8 @@ import { unscoredQuestions } from './unscored';
 import { scenarioQuestions } from './scenarios';
 import { examtopicsPart1Questions } from './examtopics_part1';
 import { examtopicsPart2Questions } from './examtopics_part2';
+import { tutorialDojoQuestions } from './tutorialdojo';
+import { officialAwsQuestions } from './official_aws';
 import explanationsMap from './option_explanations.json';
 
 // Helper function to infer style
@@ -48,6 +50,8 @@ export const allQuestions: Question[] = assignStylesAndExplanations([
   ...scenarioQuestions,
   ...examtopicsPart1Questions,
   ...examtopicsPart2Questions,
+  ...tutorialDojoQuestions,
+  ...officialAwsQuestions,
   ...unscoredQuestions,
 ]);
 
@@ -74,6 +78,8 @@ export function getQuestionStats() {
     domain4: domain4Questions.length,
     scenarios: scenarioQuestions.length,
     examtopics: examtopicsPart1Questions.length + examtopicsPart2Questions.length,
+    tutorialdojo: tutorialDojoQuestions.length,
+    officialAws: officialAwsQuestions.length,
     unscored: unscoredQuestions.length,
     scored: allQuestions.filter((q) => !q.isUnscored).length,
   };
@@ -87,5 +93,7 @@ export {
   scenarioQuestions,
   examtopicsPart1Questions,
   examtopicsPart2Questions,
+  tutorialDojoQuestions,
+  officialAwsQuestions,
   unscoredQuestions,
 };

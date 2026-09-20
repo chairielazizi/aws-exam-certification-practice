@@ -2011,5 +2011,316 @@
     "a": "Amazon SQS is a message queue for point-to-point communication.",
     "b": "Amazon SNS is a pub/sub service, but EventBridge provides more advanced routing and SaaS integrations.",
     "d": "AWS Lambda processes events, but EventBridge is the router."
+  },
+  "td-001": {
+    "a": "Consolidated Billing just allows you to track the combined costs of all linked AWS accounts in your organization. It will not help you estimate upcoming AWS costs for a new workload.",
+    "b": "Cost allocation tags are primarily used to categorize and track your AWS costs by tagging your resources. They do not estimate costs for new workloads.",
+    "c": "AWS Cost Explorer can only forecast costs based on your previous usage. Since the company is just planning to adopt AWS, they have no existing usage data to forecast from.",
+    "d": "AWS Pricing Calculator is an easy-to-use online tool that enables you to estimate the monthly cost of AWS services based on your expected usage. It is continuously updated with the latest pricing for all AWS services in all regions."
+  },
+  "td-002": {
+    "a": "This is reversed. One of the advantages is to trade capital expense for variable expense, not the other way around.",
+    "b": "By using cloud computing, you pay only when you consume computing resources and only for how much you consume, replacing large upfront capital investments with variable costs.",
+    "c": "This is the opposite. Cloud computing lets you benefit from massive economies of scale, achieving a lower variable cost than you could on your own.",
+    "d": "The Amazon.com platform is different from Amazon Web Services. Discounts from purchasing computer hardware is not an advantage of cloud computing.",
+    "e": "In a cloud computing environment, new IT resources are only a click away, reducing the time to make resources available from weeks to minutes, dramatically increasing agility."
+  },
+  "td-003": {
+    "a": "Amazon ElastiCache offers fully managed Redis and Memcached in-memory data stores. It can store the results of I/O-intensive SQL database queries in memory for low-latency access, significantly improving application performance.",
+    "b": "Amazon CloudFront is a CDN for caching static web content (images, videos, webpages) at edge locations, not for caching I/O-intensive SQL database query results.",
+    "c": "AWS IoT Greengrass runs local compute, messaging, and data caching on connected IoT devices. It is not designed for caching SQL database query results.",
+    "d": "Amazon DynamoDB Accelerator (DAX) is a caching feature only applicable to DynamoDB, which is a NoSQL database. The scenario requires caching SQL database query results."
+  },
+  "td-004": {
+    "a": "AWS provides various ways and tools to programmatically provision IT resources, such as AWS CLI, AWS API, and the web-based AWS Management Console, enabling rapid resource provisioning.",
+    "b": "AWS doesn't have an AI-powered IT ticketing platform for fulfilling resource requests. Instead, it allows you to programmatically provision IT resources directly.",
+    "c": "AWS is the cloud vendor itself and doesn't rely on third-party vendors to provision your resources.",
+    "d": "Cloud Computing is the on-demand delivery of resources via the internet, not physical delivery of servers to your data centers."
+  },
+  "td-005": {
+    "a": "Deferred payments to operational expenditures are not a supported payment model when you move to AWS.",
+    "b": "Massive discounts for bare metal servers from Amazon.com are not related to AWS cloud benefits. The Amazon e-commerce platform is separate from AWS.",
+    "c": "This is actually the other way around. Companies will replace upfront capital expenses (CAPEX) with low variable costs, not vice versa.",
+    "d": "Decoupling from the data center eliminates many costs related to building and maintaining a data center. You pay only for the resources you consume.",
+    "e": "By using cloud resources, you can design and develop new IT projects faster, reducing time to market significantly."
+  },
+  "td-006": {
+    "a": "A group can contain many users, and a user can belong to multiple groups. This is one of the important characteristics of IAM groups.",
+    "b": "There is no default group that automatically includes all users in the AWS account. If you want such a group, you must create it and assign each new user to it.",
+    "c": "There is actually a limit to the number of groups you can have, as well as a limit to how many groups a user can be in.",
+    "d": "Groups cannot be nested; they can contain only users, not other groups."
+  },
+  "td-007": {
+    "a": "Amazon Aurora is a MySQL and PostgreSQL-compatible relational database built for the cloud. It is up to five times faster than standard MySQL and auto-scales up to 128TB per database instance, making it ideal for highly scalable OLTP workloads.",
+    "b": "Amazon Timestream is a time-series database optimized for storing and analyzing time-stamped data. It is not suitable for general-purpose OLTP applications.",
+    "c": "Amazon Redshift is a data warehousing solution best for OLAP (Online Analytical Processing) workloads, not OLTP.",
+    "d": "Although DynamoDB is highly scalable, it is a NoSQL database, not a MySQL-compatible relational database suitable for OLTP workloads."
+  },
+  "td-008": {
+    "a": "VPC is a service that lets you provision a logically isolated section of the AWS Cloud. It is not a physical infrastructure component.",
+    "b": "An edge location is a site that CloudFront uses to cache copies of your content for faster delivery to users. It is not made up of discrete data centers.",
+    "c": "Availability Zones consist of one or more discrete data centers, each with redundant power, networking, and connectivity, housed in separate facilities. They are designed as independent failure zones.",
+    "d": "An AWS Region consists of multiple Availability Zones. The Region is the larger geographic area, not the individual data center grouping."
+  },
+  "td-009": {
+    "a": "AWS Technical Account Manager is your designated technical point of contact under Enterprise Support, providing advocacy and guidance. It is not a collection of paid engagement offerings.",
+    "b": "AWS Enterprise Support provides 24x7 technical support, tools, and a TAM. It is a support plan, not a collection of paid consulting engagements.",
+    "c": "Concierge Support is a team of billing and account experts that assist with billing inquiries and account best practices, not enterprise cloud adoption engagements.",
+    "d": "AWS Professional Services offers paid engagements to help achieve specific business outcomes related to enterprise cloud adoption, including the AWS Cloud Adoption Framework (CAF)."
+  },
+  "td-010": {
+    "a": "AWS CloudShell is a browser-based command-line tool for managing AWS resources. It is unrelated to 5G networks.",
+    "b": "AWS Wavelength combines 5G network capabilities with AWS compute and storage. Wavelength Zones are embedded in telecom providers' datacenters at the edge of the 5G network for single-digit millisecond latency.",
+    "c": "AWS Control Tower helps set up and govern a secure, multi-account AWS environment. It has nothing to do with 5G networks.",
+    "d": "AWS Amplify is a set of tools and frameworks for accelerating mobile and web application development, not related to 5G infrastructure."
+  },
+  "td-011": {
+    "a": "A Dedicated Host is a physical EC2 server dedicated for your use, not unused EC2 capacity. It is designed for licensing compliance, not cost savings from spare capacity.",
+    "b": "Spot Instances let you take advantage of unused EC2 capacity at up to a 90% discount. They are ideal for fault-tolerant, flexible applications. Instances can be interrupted with two minutes of notice.",
+    "c": "Convertible Reserved Instances provide up to 54% discount and can be exchanged for different instance types, but they don't utilize unused capacity and cost more than Standard RIs.",
+    "d": "Standard Reserved Instances provide up to 75% discount compared to On-Demand, but this is less than Spot's 90% discount, and they don't utilize unused capacity."
+  },
+  "td-012": {
+    "a": "This is incorrect. AWS replaces upfront capital infrastructure expenses with low variable costs, not the other way around. High variable costs is misleading.",
+    "b": "Because usage from hundreds of thousands of customers is aggregated in the cloud, AWS achieves higher economies of scale, translating into lower pay-as-you-go prices for all customers.",
+    "c": "This is the reverse. AWS replaces upfront capital expenses with low variable costs, not the other way around.",
+    "d": "Amazon.com's e-commerce platform is completely separate from Amazon Web Services. Discounts on hardware purchases are not a cloud computing benefit."
+  },
+  "td-013": {
+    "a": "Amazon Aurora is a fully-managed service that automates tasks like hardware provisioning, database setup, patching, and backups. You do not manage the guest operating system.",
+    "b": "Amazon EC2 gives you control over the instance, allowing you to install any database, manage the guest operating system, apply updates and security patches yourself.",
+    "c": "Amazon DocumentDB is a fully-managed document database service. You don't need to handle the guest operating system since it is managed by AWS.",
+    "d": "Amazon DynamoDB is a fully-managed NoSQL database service. The underlying operating system is managed by AWS, not the customer."
+  },
+  "td-014": {
+    "a": "Enterprise Support provides a 4-hour response time when your production system is impaired, not 2 hours.",
+    "b": "Enterprise Support provides a 15-minute response time when your business-critical system goes down, the fastest response time available.",
+    "c": "Enterprise Support provides a 24-hour response time for general guidance, not 48 hours.",
+    "d": "Enterprise Support provides a 1-hour response time when your production system goes down.",
+    "e": "Enterprise Support provides a 24-hour response time for general guidance, not 12 hours."
+  },
+  "td-015": {
+    "a": "This is incorrect because the requirement can be fulfilled by a Network Load Balancer, which operates at Layer 4 for TCP, UDP, and TLS traffic.",
+    "b": "Application Load Balancer operates at Layer 7 (HTTP/HTTPS) and is not designed for TCP, UDP, and TLS traffic load balancing.",
+    "c": "Gateway Load Balancer passes all Layer 3 traffic through third-party virtual appliances. It is not primarily designed for what a Network Load Balancer does.",
+    "d": "Network Load Balancer operates at Layer 4 and is best suited for TCP, UDP, and TLS traffic where extreme performance is required. It handles millions of requests per second with ultra-low latencies."
+  },
+  "td-016": {
+    "a": "AWS GovCloud is an isolated AWS Region for U.S. government agencies to meet regulatory requirements. It is not a compliance document repository.",
+    "b": "AWS Audit Manager helps automate evidence collection for audits but does not directly provide compliance reports like SOC 1 or SOC 2. It prepares for audits, not reports.",
+    "c": "AWS Artifact provides on-demand access to AWS security and compliance reports including SOC reports, PCI reports, and ISO certifications. It is the central resource for compliance documents.",
+    "d": "AWS Certificate Manager provisions, manages, and deploys SSL/TLS certificates. It does not store compliance certifications or reports."
+  },
+  "td-017": {
+    "a": "AWS Artifact provides on-demand access to compliance reports including SOC, PCI, and ISO certifications that validate AWS security controls. All AWS accounts have access.",
+    "b": "AWS Trusted Advisor provides real-time guidance following AWS best practices for cost, performance, security, and fault tolerance. It doesn't store compliance documents.",
+    "c": "AWS Certificate Manager manages SSL/TLS certificates, not compliance-related documents or audit reports.",
+    "d": "AWS Security Token Service generates temporary credentials for accessing AWS resources. It is not designed for retrieving compliance reports."
+  },
+  "td-018": {
+    "a": "Configuration Management is a shared control. AWS maintains its infrastructure configuration, while customers configure their own guest operating systems, databases, and applications.",
+    "b": "Patching the host operating system is AWS's responsibility. The customer patches the guest OS and applications, not the host OS.",
+    "c": "Service and Communications Protection or Zone Security is a Customer Specific control — solely the customer's responsibility, such as routing or zoning data within specific security environments.",
+    "d": "Awareness & Training is a shared control. AWS trains its own employees, but customers must train their own employees."
+  },
+  "td-019": {
+    "a": "Agile methodologies promote iterative development, frequent customer feedback, and continuous improvement, enabling the company to respond quickly to customer needs and deliver value continuously.",
+    "b": "Transitioning legacy infrastructure focuses on technical infrastructure modernization, not directly on organizational transformation or customer-centric team collaboration.",
+    "c": "A data and analytics platform generates insights but does not directly address optimizing operations, delivery processes, or promoting team collaboration for customer focus.",
+    "d": "Restructuring teams to prioritize product-focused and value stream-oriented approaches fosters cross-functional collaboration and ensures alignment with strategic objectives focused on customer value.",
+    "e": "Introducing new products and revenue models focuses on product transformation and innovation, not directly on organizational transformation or team collaboration."
+  },
+  "td-020": {
+    "a": "Network Load Balancer operates at Layer 4 and targets EC2 instances, containers, and IP addresses. It does not support Lambda functions as targets.",
+    "b": "Neither Gateway Load Balancer nor Network Load Balancer supports Lambda functions as targets. Only Application Load Balancer does.",
+    "c": "Application Load Balancer can register Lambda functions as targets. When a request is forwarded to a Lambda target group, it invokes the function and passes the request content in JSON format.",
+    "d": "Gateway Load Balancer routes Layer 3 traffic through third-party virtual appliances. It does not support Lambda functions as targets."
+  },
+  "td-021": {
+    "a": "Technical Account Management is part of AWS Enterprise Support. A TAM provides advocacy and guidance but is not a consulting firm that designs and builds applications.",
+    "b": "AWS Marketplace is a channel for ISVs and Consulting Partners to sell software solutions. It does not provide consulting services to design and build applications.",
+    "c": "APN Technology Partners provide software solutions hosted on or integrated with AWS, such as ISVs and SaaS vendors. They don't help design and architect workloads.",
+    "d": "APN Consulting Partners are professional services firms that help customers design, architect, migrate, or build new applications on AWS, including SIs, Strategic Consultancies, and MSPs."
+  },
+  "td-022": {
+    "a": "AWS Security Token Service is considered a global service, available in all regions without needing region-specific configuration.",
+    "b": "Amazon EC2 is a zonal service because instances are tied to the specific Availability Zone where they were launched.",
+    "c": "Amazon EFS is a regional service that stores data within and across multiple Availability Zones for high availability and durability.",
+    "d": "AWS Billing Conductor is a global billing management service that operates across all AWS Regions and does not require region selection.",
+    "e": "AWS Batch is a regional service that simplifies running batch jobs across multiple Availability Zones within a region."
+  },
+  "td-023": {
+    "a": "This is incorrect because patching the host operating system is AWS's responsibility. It falls under AWS's side of the shared responsibility model.",
+    "b": "AWS manages the host operating system (hypervisor), the virtualization layer, and the physical security of the facilities. The customer manages the guest operating system.",
+    "c": "Patching the host operating system is solely AWS's responsibility, not a shared task. The customer handles the guest OS, and AWS handles the host OS.",
+    "d": "The customer is responsible for patching the guest operating system, not the host OS. The host OS (hypervisor) is managed by AWS."
+  },
+  "td-024": {
+    "a": "CloudFront primarily caches and delivers static content from edge locations. For real-time gaming, server interactions require servers physically closer to players, not just a CDN.",
+    "b": "Autoscaling can handle varying player loads but won't solve latency issues caused by physical distance between servers in Virginia and players in Europe/Asia.",
+    "c": "AWS Direct Connect optimizes network routing and can reduce latency somewhat, but it may not be sufficient for latency-sensitive gaming applications across continents.",
+    "d": "Deploying game servers in Europe and Asia minimizes the physical distance data needs to travel, resulting in significantly faster response times and a smoother gaming experience."
+  },
+  "td-025": {
+    "a": "A Dedicated Host is a physical server fully dedicated to your use, allowing you to use existing per-socket, per-core, or per-VM software licenses (BYOL) and address compliance requirements.",
+    "b": "Reserved Instances provide discounted pricing but do not allow you to use your own server-bound software licenses.",
+    "c": "Dedicated Instances run on dedicated hardware but lack the visibility and control over instance placement on a specific physical server that Dedicated Hosts provide for licensing compliance.",
+    "d": "On-Demand Instances provide flexible pay-as-you-go pricing but do not allow you to use your existing server-bound software licenses."
+  },
+  "td-026": {
+    "a": "Concierge Support is a team of billing and account experts that assist with billing inquiries under Enterprise Support. They don't provide software solutions.",
+    "b": "Technical Account Management is part of Enterprise Support providing advocacy and guidance. It is not a category of partners providing software solutions.",
+    "c": "APN Technology Partners provide software solutions hosted on or integrated with the AWS platform, including ISVs, SaaS, PaaS, developer tools, management, and security vendors.",
+    "d": "APN Consulting Partners help customers design, architect, migrate, or build applications on AWS. They don't provide software solutions hosted on the platform."
+  },
+  "td-027": {
+    "a": "Amazon VPC lets you provision a logically isolated section of the AWS Cloud with complete control over IP address ranges, subnets, route tables, and network gateways.",
+    "b": "An Internet gateway enables communication between your VPC and the public internet. It does not isolate a virtual network space for launching resources.",
+    "c": "AWS Elastic Beanstalk is a platform for deploying web applications that handles infrastructure provisioning. It does not provision an isolated network section.",
+    "d": "Amazon EC2 is a compute service for hosting applications on virtual servers. It does not provision an isolated virtual network."
+  },
+  "td-028": {
+    "a": "The 15-minute response time for a business-critical system down is only available with Enterprise Support, not Business Support+.",
+    "b": "Business Support+ provides a 4-hour response time when your production system is impaired, not 1 hour.",
+    "c": "Business Support+ guarantees a response time of less than 1 hour when a production system is down. This is the correct response time for this support tier.",
+    "d": "The 15-minute response time for production system down is not available with Business Support+. Business Support+ offers 1-hour response for production system down."
+  },
+  "td-029": {
+    "a": "A security group acts as a virtual firewall at the instance level, controlling inbound and outbound traffic. You can assign up to five security groups to each instance.",
+    "b": "Network ACLs protect subnets by controlling inbound and outbound traffic at the subnet level, not at the individual instance level.",
+    "c": "An Elastic Network Interface is a logical networking component representing a virtual network card. It does not serve as a firewall.",
+    "d": "VPC is a logically isolated section of the AWS Cloud for launching resources. It is the network itself, not a firewall for individual instances."
+  },
+  "td-030": {
+    "a": "AWS does not simply wipe and dispose of devices. They follow strict decommissioning procedures as described in NIST 800-88 compliance guidelines.",
+    "b": "AWS does not send drives back to manufacturers. Media that stored customer data is not removed from AWS control until securely decommissioned.",
+    "c": "AWS classifies media storage devices as Critical and follows a strict decommissioning process using techniques detailed in NIST 800-88. Media is not removed from AWS control until securely decommissioned.",
+    "d": "AWS does not archive devices after their lifespan ends. Devices are securely decommissioned following strict compliance procedures."
+  },
+  "oa-001": {
+    "a": "Amazon Connect is an omnichannel cloud contact center for customer service. It does not provide a network connection between on-premises and AWS.",
+    "b": "Site-to-Site VPN creates an encrypted network path between your on-premises network and AWS Cloud network using your existing internet connection.",
+    "c": "CloudFront is a CDN that speeds up distribution of web content through edge locations worldwide. It does not provide a network connection.",
+    "d": "Direct Connect links your internal network to AWS over a dedicated fiber-optic cable, bypassing the internet. However, the scenario requires using the company's existing internet connection."
+  },
+  "oa-002": {
+    "a": "Amazon CloudFront is a CDN that securely delivers data, videos, and APIs to global customers with low latency from multiple edge locations around the world.",
+    "b": "Amazon Translate does not automatically translate third-party website interfaces. It is a machine translation service for your own content.",
+    "c": "Deploying applications in multiple AWS Regions places resources closer to users globally, improving performance and reducing latency.",
+    "d": "Amazon Comprehend is a natural language processing (NLP) service for finding insights in text. It does not translate text or enable multi-language responses.",
+    "e": "A load balancer distributes traffic to targets within one or more Availability Zones but does not accept targets across Regions."
+  },
+  "oa-003": {
+    "a": "Deploying EC2 instances in multiple Availability Zones prevents a single point of failure. AZs are designed for physical redundancy and resilience.",
+    "b": "If all instances are in a single location affected by a failure, none would be available. Multiple AZs increase availability through physical redundancy.",
+    "c": "To serve cross-Region users with low latency, you need to launch instances in the second Region closer to users. Multiple AZs within one Region don't reduce cross-Region latency.",
+    "d": "Two EC2 instances in the same or different Availability Zones will not change the overall load of the application. Multiple AZs improve availability, not load.",
+    "e": "Multiple Availability Zones improve availability but do not reduce operational costs. In fact, running in multiple AZs may increase costs."
+  },
+  "oa-004": {
+    "a": "AWS Outposts extends AWS infrastructure to on-premises sites. It does not perform system migrations from on-premises to AWS.",
+    "b": "AWS SCT converts database schemas from one engine to another. It cannot migrate an entire server with its OS and database to an EC2 instance.",
+    "c": "AWS DMS migrates data between databases but does not migrate the actual server (OS + application) to an EC2 instance.",
+    "d": "AWS Application Migration Service (MGN) is an automated lift-and-shift solution that can migrate physical servers and any databases or applications running on them to EC2 instances."
+  },
+  "oa-005": {
+    "a": "On-Demand Instances are immediately available at full price. They are not discounted and don't use unused capacity.",
+    "b": "With Spot Instances, you can access unused EC2 capacity at a significant discount — up to 90% off On-Demand prices.",
+    "c": "Reserved Instances provide a discount for committing to 1 or 3 years of usage, but this capacity is reserved for you, not unused capacity.",
+    "d": "Dedicated Instances run on hardware dedicated to your account for compliance/licensing needs. They are not discounted unused capacity."
+  },
+  "oa-006": {
+    "a": "IAM manages permissions controlling which AWS resources users can access. It does not identify security groups allowing unrestricted access.",
+    "b": "CloudTrail provides an audit record of API calls. It does not identify security groups allowing unrestricted access.",
+    "c": "Trusted Advisor checks security groups for rules allowing unrestricted access to resources, which increases risk of hacking, DoS attacks, or data loss.",
+    "d": "CloudWatch monitors and collects metrics for AWS resources. It does not identify security groups allowing unrestricted access."
+  },
+  "oa-007": {
+    "a": "DynamoDB is a fully managed NoSQL database. It provides fast performance with seamless scalability, but it is not a relational database.",
+    "b": "Amazon Aurora is a MySQL- and PostgreSQL-compatible relational database built for the cloud, combining enterprise performance with open source cost-effectiveness.",
+    "c": "Amazon EBS is a block-storage service for EC2 instances. While you can run a database on EC2 with EBS storage, EBS itself is not a relational database.",
+    "d": "Global Accelerator improves network performance for users' traffic by up to 60% using the AWS global network. It is not a relational database."
+  },
+  "oa-008": {
+    "a": "Elastic Beanstalk deploys and scales web applications on automatically provisioned infrastructure. It does not reduce website latency for static content.",
+    "b": "Route 53 is a DNS web service for domain registration and traffic routing. With only one S3 bucket, Route 53 has only one route and cannot reduce latency.",
+    "c": "DAX reduces DynamoDB response times from milliseconds to microseconds. DynamoDB tables cannot host static websites.",
+    "d": "CloudFront is a CDN that caches static and dynamic web content at edge locations worldwide, serving content from the nearest location to reduce latency."
+  },
+  "oa-009": {
+    "a": "AWS Certificate Manager (ACM) creates, stores, and renews SSL/TLS certificates. You can use ACM to implement encryption in transit using protocols like TLS.",
+    "b": "AWS Shield protects against DDoS attacks. It cannot implement encryption of data in transit.",
+    "c": "AWS Security Hub centrally views your security posture and checks against industry standards. It cannot implement encryption of data in transit.",
+    "d": "AWS RAM shares resources across AWS accounts. It cannot implement encryption of data in transit."
+  },
+  "oa-010": {
+    "a": "The reliability pillar ensures workloads perform their intended function correctly and consistently. Multi-AZ RDS deployment reduces single points of failure, supporting reliability.",
+    "b": "The security pillar protects data, systems, and assets. Multiple Availability Zones do not make an application more secure.",
+    "c": "The performance efficiency pillar focuses on using compute resources efficiently. Multiple Availability Zones do not increase performance efficiency.",
+    "d": "The cost optimization pillar focuses on delivering business value at the lowest price. Multiple Availability Zones will actually increase cost, not optimize it."
+  },
+  "oa-011": {
+    "a": "The Developer Support plan allows only email creation of support tickets and does not provide phone support.",
+    "b": "The Basic Support plan provides customer support for non-technical issues like service quota increases, but does not provide technical support.",
+    "c": "The Business Support plan provides 24/7 phone, web, and chat access to Cloud Support Engineers. It is the minimum plan with phone support.",
+    "d": "The Enterprise Support plan provides phone support, but it is not the minimum plan to do so — Business is cheaper and also provides phone support."
+  },
+  "oa-012": {
+    "a": "The number of versions of a Lambda function does not contribute to cost. Charges are based on requests and duration only.",
+    "b": "Lambda charges include the duration — the time it takes for your code to run, measured in milliseconds.",
+    "c": "The programming language used does not affect Lambda cost. Charges are based on requests and duration only.",
+    "d": "Lambda charges include the number of requests made for your functions.",
+    "e": "The total number of Lambda functions in an account does not affect cost. Charges are based on requests and duration only."
+  },
+  "oa-013": {
+    "a": "Amazon Transcribe converts audio data to text (speech-to-text). It is not a text-to-speech service.",
+    "b": "Amazon Translate is a machine translation service for converting text between languages. It is not a text-to-speech service.",
+    "c": "Amazon Polly is a machine learning service that converts text to speech, providing the ability to read text out loud.",
+    "d": "Amazon Textract extracts text from scanned documents using OCR. It is not a text-to-speech service."
+  },
+  "oa-014": {
+    "a": "Amazon SQS is a message queue for decoupling applications. It hosts queues for requests but cannot send notification alerts to a team.",
+    "b": "Amazon SNS delivers publications to subscribers via email, SMS, push notifications, etc. Ideal for alerting a team about test failures.",
+    "c": "EventBridge is a serverless event bus for connecting applications together. It is not a messaging service for delivering notification alerts to people.",
+    "d": "Amazon Connect is a cloud contact center service for customer engagement. It cannot send automated notification alerts."
+  },
+  "oa-015": {
+    "a": "An access key ID is required for programmatic access. Together with the secret access key, it authenticates API calls to AWS.",
+    "b": "A user ID is used for IAM security credentials and console login, but not specifically for programmatic access.",
+    "c": "A secondary key is a database management concept. It does not grant AWS account access.",
+    "d": "A primary key is a database management concept. It does not grant AWS account access.",
+    "e": "A secret access key is required for programmatic access. Together with the access key ID, it authenticates API calls to AWS."
+  },
+  "oa-016": {
+    "a": "Amazon Inspector is an automated security assessment for EC2 applications. It does not perform S3 data classification and discovery.",
+    "b": "Amazon Macie uses machine learning and pattern matching to automatically discover and classify sensitive data in S3 buckets.",
+    "c": "GuardDuty is a threat detection service monitoring for malicious activity. It does not perform S3 data classification.",
+    "d": "Secrets Manager protects secrets like API keys and database credentials. It does not perform S3 data classification and discovery."
+  },
+  "oa-017": {
+    "a": "AWS manages patching for the RDS engine as a managed service. Customers can only choose the maintenance time window.",
+    "b": "AWS controls physical access to data centers. Customers cannot visit data centers in person — only virtual tours are available.",
+    "c": "Customers are responsible for configuring IAM users with appropriate permissions following the principle of least privilege.",
+    "d": "AWS manages the operating system for Lambda as a fully managed serverless service. Customers do not patch it.",
+    "e": "Customers are responsible for configuring security groups to control inbound and outbound traffic to their EC2 instances."
+  },
+  "oa-018": {
+    "a": "OpsCenter provides a central location for viewing and resolving operational work items. It does not consolidate billing or provide governance.",
+    "b": "Cost and Usage Reports consolidate billing information in a report but only for individual accounts, without cross-account billing or centralized governance.",
+    "c": "AWS Organizations provides centralized governance and consolidated billing for an AWS environment with multiple accounts.",
+    "d": "IAM Identity Center manages user access across multiple accounts but configuring it independently in each account does not provide centralized governance or consolidated billing."
+  },
+  "oa-019": {
+    "a": "Amazon Connect is a cloud contact center for customer service. It is not a service for connecting on-premises networks to AWS.",
+    "b": "AWS Direct Connect links your internal network to AWS through a dedicated Ethernet fiber-optic cable. It is consistent and private because your company is the only user of the cable.",
+    "c": "Site-to-Site VPN creates an encrypted connection using the public internet. Since the internet is a shared resource, you cannot expect consistency or true privacy.",
+    "d": "Client VPN connects individual laptops/devices to AWS, not an entire data center. It is not suitable for data center-to-cloud connectivity."
+  },
+  "oa-020": {
+    "a": "Amazon S3 is an object storage service where data is stored as objects within buckets, not as files in a filesystem hierarchy.",
+    "b": "Amazon S3 provides 99.999999999% (11 nines) durability, making it one of the most durable storage systems available.",
+    "c": "Amazon S3 is not a global file system. It is an object storage service with a different access model than a file system.",
+    "d": "Amazon S3 is not a local file store. It is a cloud-based object storage service accessed over the network.",
+    "e": "Amazon S3 is not a network file system (like NFS or EFS). It is an object storage service with its own API."
   }
 }
