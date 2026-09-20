@@ -23,10 +23,17 @@ function assignStylesAndExplanations(questions: Question[]): Question[] {
 
     const style = q.style || (q.id.startsWith('sc-') ? 'scenario' : (isScenario ? 'scenario' : 'factual'));
     const optionExplanations = q.optionExplanations || (explanationsMap as Record<string, Record<string, string>>)[q.id];
+    let explanation = q.explanation;
+    
+    // Replace placeholder explanation with actual explanation combined from the correct options
+    if (explanation === 'Extracted from ExamTopics.' && optionExplanations) {
+      explanation = q.correctAnswers.map(ansId => optionExplanations[ansId]).join(' ');
+    }
 
     return {
       ...q,
       style,
+      explanation,
       ...(optionExplanations ? { optionExplanations } : {})
     };
   });
