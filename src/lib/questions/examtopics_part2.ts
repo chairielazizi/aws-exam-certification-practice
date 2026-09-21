@@ -27,7 +27,7 @@ export const examtopicsPart2Questions: Question[] = [
     "correctAnswers": [
       "b"
     ],
-    "explanation": "Extracted from ExamTopics.",
+    "explanation": "Amazon Simple Queue Service (Amazon SQS) is a fully managed message queuing service that enables you to decouple and scale microservices, distributed systems, and serverless applications. Decoupling ensures that components can execute independently and asynchronously. AWS Config tracks resource configurations. AWS Batch runs batch computing jobs. Amazon SES sends marketing and transactional emails.",
     "referenceLinks": [],
     "difficulty": "medium",
     "isUnscored": false,
@@ -61,7 +61,7 @@ export const examtopicsPart2Questions: Question[] = [
     "correctAnswers": [
       "c"
     ],
-    "explanation": "Extracted from ExamTopics.",
+    "explanation": "Backup and restore is the LEAST expensive disaster recovery (DR) strategy because data is backed up to storage (such as Amazon S3) and no duplicate compute infrastructure is kept running in the recovery region until a disaster actually strikes (highest RTO and RPO, but lowest ongoing cost). Pilot light, Warm standby, and Multi-site active-active require running continuous or semi-active standby infrastructure, which increases costs.",
     "referenceLinks": [],
     "difficulty": "medium",
     "isUnscored": false,
@@ -95,7 +95,7 @@ export const examtopicsPart2Questions: Question[] = [
     "correctAnswers": [
       "b"
     ],
-    "explanation": "Extracted from ExamTopics.",
+    "explanation": "Amazon EC2 instance store provides temporary block-level storage for an instance. This storage is located on disks that are physically attached to the host computer. It is ephemeral, meaning data persists only during the life of the instance and is lost/deleted when the instance is stopped, hibernated, or terminated. Amazon EBS, EFS, and S3 are persistent storage services.",
     "referenceLinks": [],
     "difficulty": "medium",
     "isUnscored": false,
@@ -129,7 +129,7 @@ export const examtopicsPart2Questions: Question[] = [
     "correctAnswers": [
       "c"
     ],
-    "explanation": "Extracted from ExamTopics.",
+    "explanation": "The AWS account root user is created when the AWS account is first created and represents the initial sign-in identity. It has complete and unrestricted access to all resources and billing settings in the account. MFA can and should be configured on all users, not just root. IAM users can access the Management Console, and the root user password can be changed at any time.",
     "referenceLinks": [],
     "difficulty": "medium",
     "isUnscored": false,
@@ -163,7 +163,7 @@ export const examtopicsPart2Questions: Question[] = [
     "correctAnswers": [
       "a"
     ],
-    "explanation": "Extracted from ExamTopics.",
+    "explanation": "Attaching an IAM role with the required permissions directly to the Amazon EC2 instance (via an EC2 instance profile) is the AWS best practice and most operationally efficient solution. Applications on the instance automatically receive temporary security credentials via the EC2 metadata service without storing or rotating long-term access keys.",
     "referenceLinks": [],
     "difficulty": "medium",
     "isUnscored": false,
@@ -197,7 +197,7 @@ export const examtopicsPart2Questions: Question[] = [
     "correctAnswers": [
       "b"
     ],
-    "explanation": "Extracted from ExamTopics.",
+    "explanation": "AWS Regions are physical geographic locations around the world where AWS clusters data centers. They are a core component of the AWS Global Infrastructure, alongside Availability Zones and Edge Locations. Amazon Alexa, Lightsail, and Organizations are software services, not physical infrastructure components.",
     "referenceLinks": [],
     "difficulty": "medium",
     "isUnscored": false,
@@ -231,7 +231,7 @@ export const examtopicsPart2Questions: Question[] = [
     "correctAnswers": [
       "b"
     ],
-    "explanation": "Extracted from ExamTopics.",
+    "explanation": "An Internet Gateway (IGW) is a horizontally scaled, redundant, and highly available VPC component that allows communication between instances in your VPC and the public internet. It provides a target in your VPC route tables for internet-routable traffic and performs network address translation (NAT) for instances assigned public IPv4 addresses.",
     "referenceLinks": [],
     "difficulty": "medium",
     "isUnscored": false,
@@ -265,7 +265,7 @@ export const examtopicsPart2Questions: Question[] = [
     "correctAnswers": [
       "c"
     ],
-    "explanation": "Extracted from ExamTopics.",
+    "explanation": "AWS Artifact is the central self-service portal providing on-demand access to AWS compliance reports (such as SOC 1/2/3 reports, PCI DSS certifications, and ISO certifications) and agreements. Amazon GuardDuty detects threats. AWS Security Hub gives a posture overview. AWS Shield mitigates DDoS attacks.",
     "referenceLinks": [],
     "difficulty": "medium",
     "isUnscored": false,
@@ -299,7 +299,7 @@ export const examtopicsPart2Questions: Question[] = [
     "correctAnswers": [
       "c"
     ],
-    "explanation": "Extracted from ExamTopics.",
+    "explanation": "AWS Transit Gateway acts as a central cloud router connecting thousands of Amazon VPCs and on-premises networks through a central hub. Using Transit Gateway simplifies network architecture and eliminates the operational complexity and cost of managing complex full-mesh VPC peering connections (where peering N VPCs requires N*(N-1)/2 connections).",
     "referenceLinks": [],
     "difficulty": "medium",
     "isUnscored": false,
@@ -333,7 +333,7 @@ export const examtopicsPart2Questions: Question[] = [
     "correctAnswers": [
       "d"
     ],
-    "explanation": "Extracted from ExamTopics.",
+    "explanation": "The AWS Pricing Calculator is a free web-based planning tool that allows companies to model proposed architectures and estimate costs for running infrastructure on AWS before deploying. Cost Explorer and CUR analyze historical and actual spend after resources are created. Trusted Advisor inspects existing active workloads.",
     "referenceLinks": [],
     "difficulty": "medium",
     "isUnscored": false,
@@ -367,7 +367,7 @@ export const examtopicsPart2Questions: Question[] = [
     "correctAnswers": [
       "b"
     ],
-    "explanation": "Extracted from ExamTopics.",
+    "explanation": "AWS Organizations enables centralized account management, consolidated billing across member accounts, and controlled access through Service Control Policies (SCPs). Consolidated billing combines charges across all accounts to maximize volume discounts and provide a single payment invoice. IAM manages users and roles within an account.",
     "referenceLinks": [],
     "difficulty": "medium",
     "isUnscored": false,
@@ -401,7 +401,7 @@ export const examtopicsPart2Questions: Question[] = [
     "correctAnswers": [
       "b"
     ],
-    "explanation": "Extracted from ExamTopics.",
+    "explanation": "Subnets and Internet Gateways are fundamental networking resources of Amazon Virtual Private Cloud (Amazon VPC). A subnet is a segment of a VPC IP address range in a specific Availability Zone, and an Internet Gateway enables internet connectivity. Objects and buckets belong to S3; groups, roles, and access policies belong to IAM.",
     "referenceLinks": [],
     "difficulty": "medium",
     "isUnscored": false,
@@ -435,7 +435,7 @@ export const examtopicsPart2Questions: Question[] = [
     "correctAnswers": [
       "b"
     ],
-    "explanation": "Extracted from ExamTopics.",
+    "explanation": "AWS CloudTrail tracks and logs all account activities, API calls, and console sign-in events (such as 'ConsoleLogin'), recording the timestamp, user identity, IP address, and status. Amazon Cognito manages customer app identities. Amazon Inspector scans for vulnerabilities. Amazon GuardDuty identifies security threats.",
     "referenceLinks": [],
     "difficulty": "medium",
     "isUnscored": false,
@@ -474,7 +474,7 @@ export const examtopicsPart2Questions: Question[] = [
       "a",
       "d"
     ],
-    "explanation": "Extracted from ExamTopics.",
+    "explanation": "To connect to an Amazon Linux 2 EC2 instance, administrators can use Amazon EC2 Instance Connect (a simple and secure browser-based SSH connection using temporary keys) or AWS Systems Manager Session Manager (which allows secure browser or CLI shell access without opening inbound SSH port 22 or managing bastion hosts). RDP is used for Windows instances. AWS Batch runs batch jobs. Amazon Connect is a contact center service.",
     "referenceLinks": [],
     "difficulty": "medium",
     "isUnscored": false,
@@ -508,7 +508,7 @@ export const examtopicsPart2Questions: Question[] = [
     "correctAnswers": [
       "c"
     ],
-    "explanation": "Extracted from ExamTopics.",
+    "explanation": "Amazon Comprehend is a natural language processing (NLP) service that uses machine learning to find insights and relationships in text, including performing sentiment analysis to determine whether customer communications are positive, negative, neutral, or mixed. Amazon Textract extracts printed and handwritten text. Amazon Translate translates languages. Amazon Rekognition analyzes images/videos.",
     "referenceLinks": [],
     "difficulty": "medium",
     "isUnscored": false,
@@ -542,7 +542,7 @@ export const examtopicsPart2Questions: Question[] = [
     "correctAnswers": [
       "d"
     ],
-    "explanation": "Extracted from ExamTopics.",
+    "explanation": "Amazon S3 offers virtually unlimited total storage capacity. You can store as many objects as you want in an S3 bucket. Individual objects can range from 0 bytes up to 5 TB in size.",
     "referenceLinks": [],
     "difficulty": "medium",
     "isUnscored": false,
@@ -576,7 +576,7 @@ export const examtopicsPart2Questions: Question[] = [
     "correctAnswers": [
       "c"
     ],
-    "explanation": "Extracted from ExamTopics.",
+    "explanation": "AWS Snowball is a petabyte-scale physical data transport device that allows you to securely transfer large amounts of data (such as 60 TB) between on-premises storage and Amazon S3 over several days, bypassing bandwidth limitations and congestion of the public internet. S3 Glacier is an archival storage tier. AWS DMS migrates database tables. Direct Connect takes weeks to provision physically.",
     "referenceLinks": [],
     "difficulty": "medium",
     "isUnscored": false,
@@ -610,7 +610,7 @@ export const examtopicsPart2Questions: Question[] = [
     "correctAnswers": [
       "c"
     ],
-    "explanation": "Extracted from ExamTopics.",
+    "explanation": "Amazon DynamoDB is a fully managed, serverless NoSQL key-value and document database that delivers single-digit millisecond performance at any scale. Amazon ElastiCache is in-memory; Amazon RDS/Aurora are relational; Amazon Neptune is graph.",
     "referenceLinks": [],
     "difficulty": "medium",
     "isUnscored": false,
@@ -649,7 +649,7 @@ export const examtopicsPart2Questions: Question[] = [
       "a",
       "d"
     ],
-    "explanation": "Extracted from ExamTopics.",
+    "explanation": "Reconfiguring a single account into multiple AWS accounts provides administrative and security isolation between workloads and business units (limiting the 'blast radius' of any issue), and reduces risks associated with malicious activity or credential compromise targeted at a single account. Volume discounts are aggregated automatically through consolidated billing.",
     "referenceLinks": [],
     "difficulty": "medium",
     "isUnscored": false,
@@ -683,7 +683,7 @@ export const examtopicsPart2Questions: Question[] = [
     "correctAnswers": [
       "b"
     ],
-    "explanation": "Extracted from ExamTopics.",
+    "explanation": "AWS WAF (Web Application Firewall) helps protect web applications and APIs from common web exploits and vulnerabilities, including SQL injection (SQLi) and Cross-Site Scripting (XSS), by deploying custom inspection rules on Application Load Balancers, Amazon CloudFront, or Amazon API Gateway. Security groups and NACLs operate at layers 3 and 4 and cannot inspect HTTP payload content.",
     "referenceLinks": [],
     "difficulty": "medium",
     "isUnscored": false,
@@ -717,7 +717,7 @@ export const examtopicsPart2Questions: Question[] = [
     "correctAnswers": [
       "c"
     ],
-    "explanation": "Extracted from ExamTopics.",
+    "explanation": "AWS Trusted Advisor includes service quota (limit) checks that proactively monitor your AWS resource usage against account service limits and alert you when usage exceeds 80% of a quota, helping you request limit increases before reaching capacity.",
     "referenceLinks": [],
     "difficulty": "medium",
     "isUnscored": false,
@@ -751,7 +751,7 @@ export const examtopicsPart2Questions: Question[] = [
     "correctAnswers": [
       "a"
     ],
-    "explanation": "Extracted from ExamTopics.",
+    "explanation": "Moving on-premises workloads to the AWS Cloud eliminates the capital and ongoing operating expenses associated with buying, running, powering, cooling, and maintaining physical data center facilities and hardware. Customers trade fixed data center costs for flexible variable cloud costs.",
     "referenceLinks": [],
     "difficulty": "medium",
     "isUnscored": false,
@@ -785,7 +785,7 @@ export const examtopicsPart2Questions: Question[] = [
     "correctAnswers": [
       "b"
     ],
-    "explanation": "Extracted from ExamTopics.",
+    "explanation": "The Operational Excellence pillar of the AWS Well-Architected Framework includes the design principle 'Anticipate failure'. Systems and teams should perform pre-mortem exercises to identify potential failure scenarios, test failure modes, and ensure operations can respond effectively to events.",
     "referenceLinks": [],
     "difficulty": "medium",
     "isUnscored": false,
@@ -824,7 +824,7 @@ export const examtopicsPart2Questions: Question[] = [
       "d",
       "e"
     ],
-    "explanation": "Extracted from ExamTopics.",
+    "explanation": "Amazon S3 and Amazon DynamoDB are the two AWS services that support Gateway VPC Endpoints. A Gateway endpoint provides private routing from your VPC to S3 or DynamoDB without requiring an internet gateway, NAT device, or public IP addresses, at no extra cost. Other services use Interface Endpoints (powered by AWS PrivateLink).",
     "referenceLinks": [],
     "difficulty": "medium",
     "isUnscored": false,
@@ -858,7 +858,7 @@ export const examtopicsPart2Questions: Question[] = [
     "correctAnswers": [
       "b"
     ],
-    "explanation": "Extracted from ExamTopics.",
+    "explanation": "Under the AWS shared responsibility model, Amazon WorkSpaces delivers a virtual desktop where the customer is responsible for managing, updating, and patching the guest Windows operating system and installed user applications. FSx, Directory Service, and RDS are managed services where AWS manages operating system maintenance.",
     "referenceLinks": [],
     "difficulty": "medium",
     "isUnscored": false,
@@ -892,7 +892,7 @@ export const examtopicsPart2Questions: Question[] = [
     "correctAnswers": [
       "d"
     ],
-    "explanation": "Extracted from ExamTopics.",
+    "explanation": "AWS is solely responsible for patching the host operating system, physical server hardware, and virtualization hypervisors that power Amazon EC2 instances ('security of the cloud'). The customer is responsible for patching the guest operating system installed inside their EC2 instances ('security in the cloud').",
     "referenceLinks": [],
     "difficulty": "medium",
     "isUnscored": false,
@@ -926,7 +926,7 @@ export const examtopicsPart2Questions: Question[] = [
     "correctAnswers": [
       "d"
     ],
-    "explanation": "Extracted from ExamTopics.",
+    "explanation": "Amazon RDS is a managed service where AWS handles underlying operating system updates and database engine patching. The customer's responsibility is to define a preferred regular maintenance window in the RDS configuration, which specifies when AWS is authorized to apply necessary OS and database patches.",
     "referenceLinks": [],
     "difficulty": "medium",
     "isUnscored": false,
@@ -960,7 +960,7 @@ export const examtopicsPart2Questions: Question[] = [
     "correctAnswers": [
       "b"
     ],
-    "explanation": "Extracted from ExamTopics.",
+    "explanation": "An AWS Well-Architected Review helps organizations identify architectural gaps, compare their architectures against AWS best practices across six pillars, and make informed architectural trade-offs to produce reliable and cost-effective cloud workloads. It is not a mandatory barrier or formal SLA legal audit.",
     "referenceLinks": [],
     "difficulty": "medium",
     "isUnscored": false,
@@ -994,7 +994,7 @@ export const examtopicsPart2Questions: Question[] = [
     "correctAnswers": [
       "d"
     ],
-    "explanation": "Extracted from ExamTopics.",
+    "explanation": "The Reliability pillar focuses on workloads performing their intended functions correctly and recovering automatically from infrastructure or service disruptions. Combining EC2 Auto Scaling and an Application Load Balancer to automatically replace unhealthy instances directly implements automated recovery and self-healing.",
     "referenceLinks": [],
     "difficulty": "medium",
     "isUnscored": false,
@@ -1028,7 +1028,7 @@ export const examtopicsPart2Questions: Question[] = [
     "correctAnswers": [
       "d"
     ],
-    "explanation": "Extracted from ExamTopics.",
+    "explanation": "High availability refers to an architecture's ability to remain operational and accessible with minimal to zero downtime, even when individual components fail, typically achieved by deploying redundant resources across multiple Availability Zones. Agility is speed of innovation; elasticity is dynamic scaling; scalability is handling increased load.",
     "referenceLinks": [],
     "difficulty": "medium",
     "isUnscored": false,
@@ -1062,7 +1062,7 @@ export const examtopicsPart2Questions: Question[] = [
     "correctAnswers": [
       "a"
     ],
-    "explanation": "Extracted from ExamTopics.",
+    "explanation": "With AWS Lambda (a serverless compute service), AWS manages the physical servers, operating systems, hardware scaling, and underlying runtime maintenance. The customer is responsible for their own code, configurations, IAM execution roles, and creating/managing versions and aliases of Lambda functions.",
     "referenceLinks": [],
     "difficulty": "medium",
     "isUnscored": false,
@@ -1096,7 +1096,7 @@ export const examtopicsPart2Questions: Question[] = [
     "correctAnswers": [
       "b"
     ],
-    "explanation": "Extracted from ExamTopics.",
+    "explanation": "The AWS Concierge Support team (included with Enterprise Support and Enterprise On-Ramp) is a senior customer service partner who acts as the primary point of contact for billing, invoicing, and account-related inquiries, helping customers analyze bills, navigate payment options, and manage account structures. Technical architectural guidance is provided by the TAM.",
     "referenceLinks": [],
     "difficulty": "medium",
     "isUnscored": false,
@@ -1130,7 +1130,7 @@ export const examtopicsPart2Questions: Question[] = [
     "correctAnswers": [
       "d"
     ],
-    "explanation": "Extracted from ExamTopics.",
+    "explanation": "AWS Cost and Usage Reports (AWS CUR) is the most detailed tool for cost reporting, delivering hourly, daily, or monthly billing data broken down by product, AWS resource ID, usage type, and custom cost allocation tags into an Amazon S3 bucket for analysis. AWS Budgets sets tracking thresholds.",
     "referenceLinks": [],
     "difficulty": "medium",
     "isUnscored": false,
@@ -1164,7 +1164,7 @@ export const examtopicsPart2Questions: Question[] = [
     "correctAnswers": [
       "d"
     ],
-    "explanation": "Extracted from ExamTopics.",
+    "explanation": "AWS X-Ray is an observability service that helps developers analyze and debug distributed and serverless applications (such as API Gateway, Lambda, and DynamoDB). It generates an end-to-end service map showing request paths, latencies, and bottlenecks as requests travel through application components.",
     "referenceLinks": [],
     "difficulty": "medium",
     "isUnscored": false,
@@ -1198,7 +1198,7 @@ export const examtopicsPart2Questions: Question[] = [
     "correctAnswers": [
       "c"
     ],
-    "explanation": "Extracted from ExamTopics.",
+    "explanation": "Amazon Redshift is a fast, fully managed, petabyte-scale cloud data warehouse service that uses columnar storage and massively parallel processing (MPP) to run complex analytical SQL queries against large structured and semi-structured datasets. DynamoDB is NoSQL OLTP; RDS is relational OLTP; ElastiCache is in-memory caching.",
     "referenceLinks": [],
     "difficulty": "medium",
     "isUnscored": false,
@@ -1232,7 +1232,7 @@ export const examtopicsPart2Questions: Question[] = [
     "correctAnswers": [
       "b"
     ],
-    "explanation": "Extracted from ExamTopics.",
+    "explanation": "AWS Identity and Access Management (IAM) is a foundational AWS security service provided at no additional charge. You can create users, groups, roles, and policies without incurring fees. Amazon S3 charges for storage/requests, Elastic Load Balancers charge for hourly usage and LCUs, and AWS WAF charges for web ACLs and inspected requests.",
     "referenceLinks": [],
     "difficulty": "medium",
     "isUnscored": false,
@@ -1266,7 +1266,7 @@ export const examtopicsPart2Questions: Question[] = [
     "correctAnswers": [
       "c"
     ],
-    "explanation": "Extracted from ExamTopics.",
+    "explanation": "To design a disaster recovery plan that covers multiple geographic areas and protects against regional disasters (such as natural disasters affecting an entire metropolitan region), the company must deploy its architecture across multiple AWS Regions. Availability Zones within a single Region are geographically close and could be affected by the same regional event.",
     "referenceLinks": [],
     "difficulty": "medium",
     "isUnscored": false,
@@ -1300,7 +1300,7 @@ export const examtopicsPart2Questions: Question[] = [
     "correctAnswers": [
       "a"
     ],
-    "explanation": "Extracted from ExamTopics.",
+    "explanation": "A major benefit of moving to the AWS Cloud is elasticity and cost optimization: compute instances can be launched, scaled, and terminated on demand so you only pay for resources when needed, avoiding paying for over-provisioned idle hardware during non-peak hours.",
     "referenceLinks": [],
     "difficulty": "medium",
     "isUnscored": false,
@@ -1339,7 +1339,7 @@ export const examtopicsPart2Questions: Question[] = [
       "a",
       "d"
     ],
-    "explanation": "Extracted from ExamTopics.",
+    "explanation": "AWS lowers total cost of ownership (TCO) by replacing large upfront capital expenditures (data center facilities, servers, storage arrays) with pay-as-you-go variable expenses, and by leveraging massive economies of scale to continuously lower prices for cloud services. TCO is also lowered by reducing hardware maintenance and facilities costs.",
     "referenceLinks": [],
     "difficulty": "medium",
     "isUnscored": false,
@@ -1373,7 +1373,7 @@ export const examtopicsPart2Questions: Question[] = [
     "correctAnswers": [
       "a"
     ],
-    "explanation": "Extracted from ExamTopics.",
+    "explanation": "Amazon GuardDuty is an intelligent threat detection service that continuously monitors AWS accounts, workloads, and data stored in Amazon S3 for malicious activities, unauthorized behavior, and compromised credentials by analyzing VPC Flow Logs, CloudTrail management events, S3 data events, and DNS query logs.",
     "referenceLinks": [],
     "difficulty": "medium",
     "isUnscored": false,
@@ -1407,7 +1407,7 @@ export const examtopicsPart2Questions: Question[] = [
     "correctAnswers": [
       "b"
     ],
-    "explanation": "Extracted from ExamTopics.",
+    "explanation": "AWS Enterprise Support includes designated support from an AWS Technical Account Manager (TAM), who provides proactive architectural reviews, operational health checks, and ongoing advocacy within AWS. Enterprise Support also includes 24/7 technical support with 15-minute response times for critical issues and Concierge billing support.",
     "referenceLinks": [],
     "difficulty": "medium",
     "isUnscored": false,
@@ -1441,7 +1441,7 @@ export const examtopicsPart2Questions: Question[] = [
     "correctAnswers": [
       "a"
     ],
-    "explanation": "Extracted from ExamTopics.",
+    "explanation": "AWS automatically encrypts all data stored in Amazon DynamoDB at rest by default using AWS Key Management Service (AWS KMS) customer master keys, with no additional configuration required. EC2 instance OS patching, user network traffic encryption, and website TLS certificate creation require customer initiation.",
     "referenceLinks": [],
     "difficulty": "medium",
     "isUnscored": false,
@@ -1475,7 +1475,7 @@ export const examtopicsPart2Questions: Question[] = [
     "correctAnswers": [
       "c"
     ],
-    "explanation": "Extracted from ExamTopics.",
+    "explanation": "AWS Cost Explorer is a tool that allows you to visualize, understand, and manage your AWS costs and usage over time through interactive dashboards, historical charts (up to 14 months), and spending forecasts. Trusted Advisor provides best-practice recommendations; CloudWatch monitors operational performance; Budgets sends alerts based on defined thresholds.",
     "referenceLinks": [],
     "difficulty": "medium",
     "isUnscored": false,
@@ -1509,7 +1509,7 @@ export const examtopicsPart2Questions: Question[] = [
     "correctAnswers": [
       "c"
     ],
-    "explanation": "Extracted from ExamTopics.",
+    "explanation": "AWS Outposts brings native AWS infrastructure, services, and APIs directly to the customer's on-premises facility or data center. This satisfies strict regulatory data residency requirements (keeping data physically on premises) while delivering single-digit millisecond latency to local systems and applications.",
     "referenceLinks": [],
     "difficulty": "medium",
     "isUnscored": false,
@@ -1543,7 +1543,7 @@ export const examtopicsPart2Questions: Question[] = [
     "correctAnswers": [
       "b"
     ],
-    "explanation": "Extracted from ExamTopics.",
+    "explanation": "An Amazon Virtual Private Cloud (Amazon VPC) enables you to provision a logically isolated section of the AWS Cloud where you can launch AWS resources in a virtual network that you define, complete with control over IP ranges, subnets, route tables, and network gateways. Availability Zones are physical locations within a Region, not isolated networks.",
     "referenceLinks": [],
     "difficulty": "medium",
     "isUnscored": false,
@@ -1577,7 +1577,7 @@ export const examtopicsPart2Questions: Question[] = [
     "correctAnswers": [
       "c"
     ],
-    "explanation": "Extracted from ExamTopics.",
+    "explanation": "Amazon Route 53 is a highly available, scalable cloud Domain Name System (DNS) web service designed to give developers and businesses an extremely reliable and cost-effective way to route end users to internet applications by translating names like www.example.com into numeric IP addresses. Amazon VPC is virtual networking; CloudFront is a CDN; Amazon Connect is a contact center service.",
     "referenceLinks": [],
     "difficulty": "medium",
     "isUnscored": false,
@@ -1611,7 +1611,7 @@ export const examtopicsPart2Questions: Question[] = [
     "correctAnswers": [
       "b"
     ],
-    "explanation": "Extracted from ExamTopics.",
+    "explanation": "An AWS best practice for securing the AWS account root user is to enable Multi-Factor Authentication (MFA) immediately, preferably using a hardware MFA device or authenticator app. Furthermore, you should never create access keys for the root user, use the root user only for tasks that strictly require it, and create individual IAM administrative users for everyday tasks.",
     "referenceLinks": [],
     "difficulty": "medium",
     "isUnscored": false,
@@ -1645,7 +1645,7 @@ export const examtopicsPart2Questions: Question[] = [
     "correctAnswers": [
       "b"
     ],
-    "explanation": "Extracted from ExamTopics.",
+    "explanation": "AWS Systems Manager Session Manager provides secure and auditable instance management without needing to open inbound SSH ports (port 22), manage SSH key pairs, or use bastion hosts. Access is controlled via IAM policies, and session activity can be logged to Amazon S3 or CloudWatch Logs.",
     "referenceLinks": [],
     "difficulty": "medium",
     "isUnscored": false,
@@ -1679,7 +1679,7 @@ export const examtopicsPart2Questions: Question[] = [
     "correctAnswers": [
       "d"
     ],
-    "explanation": "Extracted from ExamTopics.",
+    "explanation": "When purchasing an Amazon EC2 Dedicated Host reservation, paying the entire commitment with the 'All Upfront' payment option provides the largest discount compared to Partial Upfront or No Upfront payment options because paying 100% upfront maximizes the financial discount offered by AWS.",
     "referenceLinks": [],
     "difficulty": "medium",
     "isUnscored": false,
@@ -1713,7 +1713,7 @@ export const examtopicsPart2Questions: Question[] = [
     "correctAnswers": [
       "c"
     ],
-    "explanation": "Extracted from ExamTopics.",
+    "explanation": "Architecture optimization is the cost governance best practice where workloads are intentionally re-architected or refined to utilize specific AWS services (such as serverless or managed services) and right-sized components to achieve higher operational efficiency and lower total costs.",
     "referenceLinks": [],
     "difficulty": "medium",
     "isUnscored": false,
@@ -1747,7 +1747,7 @@ export const examtopicsPart2Questions: Question[] = [
     "correctAnswers": [
       "b"
     ],
-    "explanation": "Extracted from ExamTopics.",
+    "explanation": "Hosting a MySQL database on Amazon Elastic Compute Cloud (Amazon EC2) instances provides the customer with full administrative root control over the operating system, file system, database installation, and configuration parameters. In managed services like Amazon RDS or Aurora, AWS manages and restricts OS-level access.",
     "referenceLinks": [],
     "difficulty": "medium",
     "isUnscored": false,
@@ -1781,7 +1781,7 @@ export const examtopicsPart2Questions: Question[] = [
     "correctAnswers": [
       "d"
     ],
-    "explanation": "Extracted from ExamTopics.",
+    "explanation": "The AWS global infrastructure consists of isolated AWS Regions worldwide, each containing multiple, physically independent Availability Zones (AZs) that are interconnected with private, redundant, high-bandwidth, low-latency fiber networking and redundant power supplies. This provides fault tolerance against individual data center disruptions.",
     "referenceLinks": [],
     "difficulty": "medium",
     "isUnscored": false,
@@ -1815,7 +1815,7 @@ export const examtopicsPart2Questions: Question[] = [
     "correctAnswers": [
       "b"
     ],
-    "explanation": "Extracted from ExamTopics.",
+    "explanation": "Elasticity is the cloud benefit that enables infrastructure to automatically scale capacity up and down to match dynamic demand patterns. Amazon EC2 Auto Scaling automatically adjusts the number of EC2 instances in response to changing traffic demands, embodying elasticity.",
     "referenceLinks": [],
     "difficulty": "medium",
     "isUnscored": false,
@@ -1849,7 +1849,7 @@ export const examtopicsPart2Questions: Question[] = [
     "correctAnswers": [
       "a"
     ],
-    "explanation": "Extracted from ExamTopics.",
+    "explanation": "Amazon Simple Notification Service (Amazon SNS) is a fully managed publish/subscribe messaging service that enables distributed applications to fan out notifications, including sending both SMS text messages and email messages (as well as push notifications) to end-user subscribers. Amazon SES is for email only; CloudWatch alerts trigger SNS; SQS is a message queue for polling.",
     "referenceLinks": [],
     "difficulty": "medium",
     "isUnscored": false,
@@ -1883,7 +1883,7 @@ export const examtopicsPart2Questions: Question[] = [
     "correctAnswers": [
       "d"
     ],
-    "explanation": "Extracted from ExamTopics.",
+    "explanation": "AWS Organizations enables customers to designate a management account (formerly known as a master payer account) to view consolidated billing reports, receive a single combined monthly invoice, and benefit from aggregated volume discounts across all member accounts.",
     "referenceLinks": [],
     "difficulty": "medium",
     "isUnscored": false,
@@ -1917,7 +1917,7 @@ export const examtopicsPart2Questions: Question[] = [
     "correctAnswers": [
       "d"
     ],
-    "explanation": "Extracted from ExamTopics.",
+    "explanation": "Under the AWS shared responsibility model, the customer is responsible for managing and updating the guest operating system on Amazon EC2 instances, including applying security patches, antivirus updates, and configuration management. For managed services like Lambda, DynamoDB, and S3, AWS manages the underlying OS and infrastructure.",
     "referenceLinks": [],
     "difficulty": "medium",
     "isUnscored": false,
@@ -1951,7 +1951,7 @@ export const examtopicsPart2Questions: Question[] = [
     "correctAnswers": [
       "b"
     ],
-    "explanation": "Extracted from ExamTopics.",
+    "explanation": "Amazon Lightsail is designed to be the easiest, most cost-effective way for users with limited cloud operational experience to quickly launch and manage small websites, web applications, and databases with pre-configured virtual private servers, storage, and networking for a predictable low monthly price. EC2 requires manual infrastructure management.",
     "referenceLinks": [],
     "difficulty": "medium",
     "isUnscored": false,
@@ -1985,7 +1985,7 @@ export const examtopicsPart2Questions: Question[] = [
     "correctAnswers": [
       "d"
     ],
-    "explanation": "Extracted from ExamTopics.",
+    "explanation": "Creating cost allocation tags allows a company to label AWS resources with metadata (such as ApplicationName, Environment, or Project). Once activated in the Billing console, these tags appear in AWS Cost Explorer and Cost and Usage Reports to break down and monitor cloud spending on a per-application basis.",
     "referenceLinks": [],
     "difficulty": "medium",
     "isUnscored": false,
@@ -2019,7 +2019,7 @@ export const examtopicsPart2Questions: Question[] = [
     "correctAnswers": [
       "c"
     ],
-    "explanation": "Extracted from ExamTopics.",
+    "explanation": "Testing recovery procedures is a fundamental design principle of the Reliability pillar of the AWS Well-Architected Framework. In the cloud, you can simulate different failure modes or validate recovery procedures using automation to uncover flaws before a real disaster occurs. Manual changes and vertical scaling reduce reliability.",
     "referenceLinks": [],
     "difficulty": "medium",
     "isUnscored": false,
@@ -2053,7 +2053,7 @@ export const examtopicsPart2Questions: Question[] = [
     "correctAnswers": [
       "b"
     ],
-    "explanation": "Extracted from ExamTopics.",
+    "explanation": "Amazon DynamoDB is a fully managed, serverless, non-relational (NoSQL) key-value and document database service. It eliminates the need to provision, patch, or manage underlying hardware, servers, or database software. Amazon RDS and Aurora are relational databases; Redshift is an analytical data warehouse.",
     "referenceLinks": [],
     "difficulty": "medium",
     "isUnscored": false,
@@ -2087,7 +2087,7 @@ export const examtopicsPart2Questions: Question[] = [
     "correctAnswers": [
       "c"
     ],
-    "explanation": "Extracted from ExamTopics.",
+    "explanation": "Under the AWS shared responsibility model for Amazon RDS, AWS is responsible for installing the database engine, managing hardware, applying OS patches, and taking automated backups. The customer is responsible for managing database user permissions, creating tables, defining schemas, and optimizing queries.",
     "referenceLinks": [],
     "difficulty": "medium",
     "isUnscored": false,
@@ -2121,7 +2121,7 @@ export const examtopicsPart2Questions: Question[] = [
     "correctAnswers": [
       "b"
     ],
-    "explanation": "Extracted from ExamTopics.",
+    "explanation": "Amazon API Gateway is a fully managed service that makes it easy for developers to create, publish, maintain, monitor, and secure REST, HTTP, and WebSocket APIs at any scale, handling traffic management, authorization, access control, monitoring, and API versioning.",
     "referenceLinks": [],
     "difficulty": "medium",
     "isUnscored": false,
@@ -2155,7 +2155,7 @@ export const examtopicsPart2Questions: Question[] = [
     "correctAnswers": [
       "c"
     ],
-    "explanation": "Extracted from ExamTopics.",
+    "explanation": "Amazon Rekognition is a fully managed machine learning service for image and video analysis that requires no machine learning expertise. It includes pre-trained computer vision models capable of automatically identifying inappropriate, unwanted, or offensive visual content (content moderation) in uploaded photos. SageMaker is a developer platform for building custom models.",
     "referenceLinks": [],
     "difficulty": "medium",
     "isUnscored": false,
@@ -2189,7 +2189,7 @@ export const examtopicsPart2Questions: Question[] = [
     "correctAnswers": [
       "d"
     ],
-    "explanation": "Extracted from ExamTopics.",
+    "explanation": "When a company hosts databases on Amazon EC2 instances, AWS is responsible for the physical host infrastructure, data center security, virtualization hypervisor, and providing the base operating system installation images (AMIs). The customer is responsible for ongoing operating system patching, database software installation, patching, backups, and security.",
     "referenceLinks": [],
     "difficulty": "medium",
     "isUnscored": false,
@@ -2223,7 +2223,7 @@ export const examtopicsPart2Questions: Question[] = [
     "correctAnswers": [
       "c"
     ],
-    "explanation": "Extracted from ExamTopics.",
+    "explanation": "Amazon S3 Standard-Infrequent Access (S3 Standard-IA) is designed for data that is accessed less frequently but requires rapid access within milliseconds when requested. It stores data redundantly across multiple Availability Zones, ensuring high durability (99.999999999%) for critical non-recreatable data at a lower storage price than S3 Standard. S3 One Zone-IA stores data in only one AZ, which risks data loss if that AZ is destroyed. S3 Glacier takes minutes to hours for retrieval.",
     "referenceLinks": [],
     "difficulty": "medium",
     "isUnscored": false,
@@ -2262,7 +2262,7 @@ export const examtopicsPart2Questions: Question[] = [
       "b",
       "d"
     ],
-    "explanation": "Extracted from ExamTopics.",
+    "explanation": "To handle seasonal workload increases in a cost-effective manner, an online retailer benefits from Auto Scaling policies (which automatically launch additional EC2 instances during peak demand and terminate them when traffic subsides) and Pay-as-you-go pricing (paying only for the extra instances during the active spike without buying permanent hardware).",
     "referenceLinks": [],
     "difficulty": "medium",
     "isUnscored": false,
@@ -2296,7 +2296,7 @@ export const examtopicsPart2Questions: Question[] = [
     "correctAnswers": [
       "d"
     ],
-    "explanation": "Extracted from ExamTopics.",
+    "explanation": "Amazon Simple Queue Service (Amazon SQS) is a fully managed message queuing service that enables asynchronous communication and loose coupling between microservices. It buffers messages reliably between producers and consumers, allowing them to scale and operate independently without direct point-to-point connections.",
     "referenceLinks": [],
     "difficulty": "medium",
     "isUnscored": false,
@@ -2330,7 +2330,7 @@ export const examtopicsPart2Questions: Question[] = [
     "correctAnswers": [
       "c"
     ],
-    "explanation": "Extracted from ExamTopics.",
+    "explanation": "The AWS Compliance Program provides information on how AWS complies with international and regional security standards and regulatory requirements (such as GDPR, ISO 27001, SOC, HIPAA), enabling customers to determine which AWS services and regions meet their specific regional compliance needs. AWS Artifact provides downloadable compliance documents.",
     "referenceLinks": [],
     "difficulty": "medium",
     "isUnscored": false,
@@ -2364,7 +2364,7 @@ export const examtopicsPart2Questions: Question[] = [
     "correctAnswers": [
       "a"
     ],
-    "explanation": "Extracted from ExamTopics.",
+    "explanation": "Amazon Cognito provides user identity management, authentication, and access control for web and mobile applications. It supports user pools for sign-up and sign-in, as well as identity pools to federate with social identity providers (like Apple, Google, Facebook) or enterprise SAML/OIDC identity systems to grant temporary AWS credentials.",
     "referenceLinks": [],
     "difficulty": "medium",
     "isUnscored": false,
@@ -2398,7 +2398,7 @@ export const examtopicsPart2Questions: Question[] = [
     "correctAnswers": [
       "a"
     ],
-    "explanation": "Extracted from ExamTopics.",
+    "explanation": "For a rightsized database server that must run continuously for 1 year, a Standard Reserved Instance (RI) provides the highest discount (up to 72% over On-Demand rates) in exchange for a 1-year steady-state commitment. Convertible RIs provide flexibility to change instance families at a lower discount rate; Spot instances can be interrupted; On-Demand offers no commitment discount.",
     "referenceLinks": [],
     "difficulty": "medium",
     "isUnscored": false,
@@ -2432,7 +2432,7 @@ export const examtopicsPart2Questions: Question[] = [
     "correctAnswers": [
       "a"
     ],
-    "explanation": "Extracted from ExamTopics.",
+    "explanation": "Security groups act as virtual firewalls at the instance (ENI) level. In a multi-tier application, security groups can reference other security groups as their source (e.g., allowing inbound traffic to the database tier only from the security group of the web/app tier), enforcing the principle of least privilege network access across tiers.",
     "referenceLinks": [],
     "difficulty": "medium",
     "isUnscored": false,
@@ -2466,7 +2466,7 @@ export const examtopicsPart2Questions: Question[] = [
     "correctAnswers": [
       "a"
     ],
-    "explanation": "Extracted from ExamTopics.",
+    "explanation": "An IAM role is an IAM identity with permission policies that determine what the role can and cannot do in AWS, but does not have permanent credentials. Instead, when an application assumes a role, AWS provides temporary, auto-rotated security credentials, which is the AWS security best practice for granting permissions to applications and services.",
     "referenceLinks": [],
     "difficulty": "medium",
     "isUnscored": false,
@@ -2505,7 +2505,7 @@ export const examtopicsPart2Questions: Question[] = [
       "a",
       "e"
     ],
-    "explanation": "Extracted from ExamTopics.",
+    "explanation": "The customer is responsible for operating system patching on Amazon EC2 instances and on Amazon Elastic Container Service (Amazon ECS) instances when using the EC2 launch type (where the customer manages the underlying container host VMs). With serverless compute like AWS Lambda and AWS Fargate, or managed databases like Amazon RDS, AWS manages OS patching.",
     "referenceLinks": [],
     "difficulty": "medium",
     "isUnscored": false,
@@ -2539,7 +2539,7 @@ export const examtopicsPart2Questions: Question[] = [
     "correctAnswers": [
       "a"
     ],
-    "explanation": "Extracted from ExamTopics.",
+    "explanation": "Security groups control inbound and outbound network traffic for Amazon EC2 instances at the virtual network interface level. Security groups are stateful and allow you to specify allowable protocols, ports, and source/destination IP ranges or other security groups.",
     "referenceLinks": [],
     "difficulty": "medium",
     "isUnscored": false,
@@ -2573,7 +2573,7 @@ export const examtopicsPart2Questions: Question[] = [
     "correctAnswers": [
       "b"
     ],
-    "explanation": "Extracted from ExamTopics.",
+    "explanation": "The AWS Developer Support plan is the lowest-cost paid support tier that provides business-hours email access to Cloud Support Associates for one primary contact, general architectural guidance, and a response time target of under 12 hours for client-side issues and under 24 hours for general guidance. Basic support offers no technical support cases.",
     "referenceLinks": [],
     "difficulty": "medium",
     "isUnscored": false,
@@ -2607,7 +2607,7 @@ export const examtopicsPart2Questions: Question[] = [
     "correctAnswers": [
       "b"
     ],
-    "explanation": "Extracted from ExamTopics.",
+    "explanation": "Amazon Route 53 is a highly available and scalable cloud Domain Name System (DNS) web service that also acts as a domain name registrar, allowing you to register and host domain names, manage DNS records, and route internet traffic to AWS and external web endpoints.",
     "referenceLinks": [],
     "difficulty": "medium",
     "isUnscored": false,
@@ -2641,7 +2641,7 @@ export const examtopicsPart2Questions: Question[] = [
     "correctAnswers": [
       "c"
     ],
-    "explanation": "Extracted from ExamTopics.",
+    "explanation": "AWS Trusted Advisor is an online tool that inspects your AWS environment and provides real-time best practice recommendations across five key categories: Cost Optimization, Performance, Security, Fault Tolerance, and Service Limits. AWS Shield and WAF are security services; Service Catalog manages IT product catalogs.",
     "referenceLinks": [],
     "difficulty": "medium",
     "isUnscored": false,
@@ -2675,7 +2675,7 @@ export const examtopicsPart2Questions: Question[] = [
     "correctAnswers": [
       "d"
     ],
-    "explanation": "Extracted from ExamTopics.",
+    "explanation": "AWS X-Ray helps developers analyze and debug distributed applications, such as those built using a microservices architecture. It provides an end-to-end trace of user requests, visual service maps, and performance metrics to identify latency bottlenecks and errors across services.",
     "referenceLinks": [],
     "difficulty": "medium",
     "isUnscored": false,
@@ -2709,7 +2709,7 @@ export const examtopicsPart2Questions: Question[] = [
     "correctAnswers": [
       "d"
     ],
-    "explanation": "Extracted from ExamTopics.",
+    "explanation": "Economies of scale is the cloud computing benefit where AWS aggregates usage from hundreds of thousands of active customers, allowing AWS to purchase hardware and power at massive bulk discounts and operate at lower unit costs, which AWS passes along to customers in the form of lower variable pay-as-you-go pricing.",
     "referenceLinks": [],
     "difficulty": "medium",
     "isUnscored": false,
@@ -2743,7 +2743,7 @@ export const examtopicsPart2Questions: Question[] = [
     "correctAnswers": [
       "c"
     ],
-    "explanation": "Extracted from ExamTopics.",
+    "explanation": "Amazon GuardDuty is an intelligent threat detection service that continuously monitors for malicious activity, anomalous behavior, and unauthorized actions across AWS accounts, workloads (EC2 instances and container clusters), and data stored in Amazon S3 buckets using machine learning and integrated threat intelligence.",
     "referenceLinks": [],
     "difficulty": "medium",
     "isUnscored": false,
@@ -2777,7 +2777,7 @@ export const examtopicsPart2Questions: Question[] = [
     "correctAnswers": [
       "c"
     ],
-    "explanation": "Extracted from ExamTopics.",
+    "explanation": "Amazon Elastic Container Registry (Amazon ECR) is a fully managed container image registry that makes it easy for developers to securely store, manage, share, and deploy Docker container images. It integrates natively with Amazon ECS, Amazon EKS, and AWS Lambda.",
     "referenceLinks": [],
     "difficulty": "medium",
     "isUnscored": false,
@@ -2811,7 +2811,7 @@ export const examtopicsPart2Questions: Question[] = [
     "correctAnswers": [
       "d"
     ],
-    "explanation": "Extracted from ExamTopics.",
+    "explanation": "Amazon Inspector is an automated vulnerability management service that continually scans Amazon EC2 workloads for software vulnerabilities (CVEs) and unintended network exposure. It provides detailed assessment findings and remediation guidance. Trusted Advisor provides high-level checks; Macie scans S3 for PII.",
     "referenceLinks": [],
     "difficulty": "medium",
     "isUnscored": false,
@@ -2845,7 +2845,7 @@ export const examtopicsPart2Questions: Question[] = [
     "correctAnswers": [
       "c"
     ],
-    "explanation": "Extracted from ExamTopics.",
+    "explanation": "Amazon DynamoDB global tables provide a fully managed, multi-region, multi-active database solution that automatically replicates DynamoDB tables across chosen AWS Regions. It delivers local read and write performance for globally distributed users with the least amount of operational overhead because replication is handled transparently by AWS.",
     "referenceLinks": [],
     "difficulty": "medium",
     "isUnscored": false,
@@ -2884,7 +2884,7 @@ export const examtopicsPart2Questions: Question[] = [
       "a",
       "e"
     ],
-    "explanation": "Extracted from ExamTopics.",
+    "explanation": "Economic advantages of moving to the AWS Cloud include increased workforce productivity (developers spend less time on infrastructure maintenance and more time building core business value) and faster product launches (enabling companies to experiment rapidly and deliver features to market faster). Compliance audits and data encryption are still required.",
     "referenceLinks": [],
     "difficulty": "medium",
     "isUnscored": false,
@@ -2918,7 +2918,7 @@ export const examtopicsPart2Questions: Question[] = [
     "correctAnswers": [
       "c"
     ],
-    "explanation": "Extracted from ExamTopics.",
+    "explanation": "Under the AWS shared responsibility model, inherited controls are controls that the customer fully inherits from AWS. Physical and environmental controls of AWS data centers and facilities (such as biometric access, video surveillance, redundant power, and HVAC) are completely managed by AWS, and the customer inherits these protections without performing any maintenance.",
     "referenceLinks": [],
     "difficulty": "medium",
     "isUnscored": false,
@@ -2952,7 +2952,7 @@ export const examtopicsPart2Questions: Question[] = [
     "correctAnswers": [
       "a"
     ],
-    "explanation": "Extracted from ExamTopics.",
+    "explanation": "According to the AWS shared responsibility model, managing the guest operating system (including installing security patches, OS configuration, and antivirus software) on Amazon EC2 instances is the customer's responsibility. AWS manages the host operating systems, virtualization layer, network hardware, and Availability Zone infrastructure.",
     "referenceLinks": [],
     "difficulty": "medium",
     "isUnscored": false,
@@ -2986,7 +2986,7 @@ export const examtopicsPart2Questions: Question[] = [
     "correctAnswers": [
       "c"
     ],
-    "explanation": "Extracted from ExamTopics.",
+    "explanation": "Agility in the cloud refers to the ability to rapidly develop, test, and release application features and products in an iterative manner to reduce time to market. Cloud computing provides on-demand access to resources, enabling teams to experiment quickly and innovate without waiting for hardware procurement.",
     "referenceLinks": [],
     "difficulty": "medium",
     "isUnscored": false,
@@ -3020,7 +3020,7 @@ export const examtopicsPart2Questions: Question[] = [
     "correctAnswers": [
       "c"
     ],
-    "explanation": "Extracted from ExamTopics.",
+    "explanation": "The Reliability pillar of the AWS Well-Architected Framework encompasses the ability of a workload to perform its intended function correctly and consistently, which includes the ability to recover infrastructure and resume operations quickly in the case of a natural disaster or major outage (disaster recovery design).",
     "referenceLinks": [],
     "difficulty": "medium",
     "isUnscored": false,
@@ -3054,7 +3054,7 @@ export const examtopicsPart2Questions: Question[] = [
     "correctAnswers": [
       "d"
     ],
-    "explanation": "Extracted from ExamTopics.",
+    "explanation": "AWS CloudTrail tracks, logs, and records API calls, user actions, and account activity across your AWS infrastructure, including actions taken through the AWS Management Console, AWS SDKs, and AWS CLI. Amazon CloudWatch monitors metrics and alarms; AWS Config tracks resource configurations and compliance history.",
     "referenceLinks": [],
     "difficulty": "medium",
     "isUnscored": false,
@@ -3088,7 +3088,7 @@ export const examtopicsPart2Questions: Question[] = [
     "correctAnswers": [
       "d"
     ],
-    "explanation": "Extracted from ExamTopics.",
+    "explanation": "AWS Cost Anomaly Detection is a cost management feature that uses advanced machine learning models to continually monitor your cost and usage patterns, detect unusual or anomalous cloud spending spikes, and identify root causes so you can take quick action to prevent unexpected charges.",
     "referenceLinks": [],
     "difficulty": "medium",
     "isUnscored": false,
